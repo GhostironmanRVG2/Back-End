@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>Back-end</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <servlet>
+  
+  <servlet-name>Register</servlet-name>
+  <servlet-class>Register</servlet-class>
+  
+  </servlet>
+  <servlet-mapping>
+  
+  <servlet-name>Register</servlet-name>
+  <url-pattern>/Register</url-pattern>
+  
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <servlet>
+  <servlet-name>Login</servlet-name>
+  <servlet-class>Login</servlet-class>
+  
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>Login</servlet-name>
+  <url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  
+  
+  
+  <servlet>
+  <servlet-name>UserGetID</servlet-name>
+  <servlet-class>UserGetID</servlet-class>
+  
+  </servlet> 
+  <servlet-mapping>
+  <servlet-name>UserGetID</servlet-name>
+  <url-pattern>/UserGetID</url-pattern>
+  
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <servlet>
+  <servlet-name>ActivityGet</servlet-name>
+  <servlet-class>ActivityGet</servlet-class>
+  
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>ActivityGet</servlet-name>
+  <url-pattern>/ActivityGet</url-pattern>
+  
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  
+  <servlet>
+  <servlet-name>RewardGet</servlet-name>
+  <servlet-class>RewardGet</servlet-class>  
+  
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>RewardGet</servlet-name>
+  <url-pattern>/RewardGet</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  
+  
+  
+  <servlet>
+  <servlet-name>UserGet</servlet-name>
+  <servlet-class>UserGet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>UserGet</servlet-name>
+  <url-pattern>/UserGet</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  <servlet>
+  <servlet-name>FactDelete</servlet-name>
+  <servlet-class>FactDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>FactDelete</servlet-name>
+  <url-pattern>/FactDelete</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <servlet>
+  <servlet-name>ActivityRequestJoinGet</servlet-name>
+  <servlet-class>ActivityRequestJoinGet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ActivityRequestJoinGet</servlet-name>
+  <url-pattern>/ActivityRequestJoinGet</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <servlet>
+  <servlet-name>FactPut</servlet-name>
+  <servlet-class>FactPut</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>FactPut</servlet-name>
+  <url-pattern>/FactPut</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  <servlet>
+  <servlet-name>ActivityRequestGet</servlet-name>
+  <servlet-class>ActivityRequestGet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ActivityRequestGet</servlet-name>
+  <url-pattern>/ActivityRequestGet</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  <servlet>
+  <servlet-name>FactPost</servlet-name>
+  <servlet-class>FactPost</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>FactPost</servlet-name>
+  <url-pattern>/FactPost</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+   <servlet>
+  <servlet-name>CollaboratorGet</servlet-name>
+  <servlet-class>CollaboratorGet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>CollaboratorGet</servlet-name>
+  <url-pattern>/CollaboratorGet</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  
+  <servlet>
+  <servlet-name>ChildGet</servlet-name>
+  <servlet-class>ChildGet</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ChildGet</servlet-name>
+  <url-pattern>/ChildGet</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  
+   
+  <servlet>
+  <servlet-name>InstitutionGet</servlet-name>
+  <servlet-class>InstitutionGet</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>InstitutionGet</servlet-name>
+  <url-pattern>/InstitutionGet</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  <servlet>
+  <servlet-name>FactGet</servlet-name>
+  <servlet-class>FactGet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>FactGet</servlet-name>
+  <url-pattern>/FactGet</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <servlet>
+  <servlet-name>SubscriptionGet</servlet-name>
+  <servlet-class>SubscriptionGet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>SubscriptionGet</servlet-name>
+  <url-pattern>/SubscriptionGet</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  
+  
+  
+  <servlet>
+  <servlet-name>SugestionGet</servlet-name>
+  <servlet-class>SugestionGet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>SugestionGet</servlet-name>
+  <url-pattern>/SugestionGet</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <servlet>
+  <servlet-name>Upload</servlet-name>
+  <servlet-class>Upload</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>Upload</servlet-name>
+  <url-pattern>/Upload</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  
+  
+  <servlet>
+  <servlet-name>FactUpload</servlet-name>
+  <servlet-class>FactUpload</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>FactUpload</servlet-name>
+  <url-pattern>/FactUpload</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  <servlet>
+  <servlet-name>UploadPutRA</servlet-name>
+  <servlet-class>UploadPutRA</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>UploadPutRA</servlet-name>
+  <url-pattern>/UploadPutRA</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+   <servlet>
+  <servlet-name>UserGetNonEmail</servlet-name>
+  <servlet-class>UserGetNonEmail</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>UserGetNonEmail</servlet-name>
+  <url-pattern>/UserGetNonEmail</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  
+  
+  <servlet>
+  <servlet-name>RegisterStaff</servlet-name>
+  <servlet-class>RegisterStaff</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>RegisterStaff</servlet-name>
+  <url-pattern>/RegisterStaff</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  
+  <servlet>
+  <servlet-name>LogoutServlet</servlet-name>
+  <servlet-class>LogoutServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>LogoutServlet</servlet-name>
+  <url-pattern>/LogoutServlet</url-pattern>
+  </servlet-mapping>
+
+  
+  
+  
+  
+  
+  
+  <servlet>
+  <servlet-name>SessionGet</servlet-name>
+  <servlet-class>SessionGet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>SessionGet</servlet-name>
+  <url-pattern>/SessionGet</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  
+  
+  
+  <servlet>
+  <servlet-name>ChildPut</servlet-name>
+  <servlet-class>ChildPut</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ChildPut</servlet-name>
+  <url-pattern>/ChildPut</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  
+  
+  <servlet>
+  <servlet-name>UserPut</servlet-name>
+  <servlet-class>UserPut</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>UserPut</servlet-name>
+  <url-pattern>/UserPut</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+    <servlet>
+  <servlet-name>ActivityPost</servlet-name>
+  <servlet-class>ActivityPost</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ActivityPost</servlet-name>
+  <url-pattern>/ActivityPost</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</web-app>
