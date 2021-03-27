@@ -18,6 +18,7 @@ public class ActivityGet extends HttpServlet {
 	//VAMOS VER SE ISTO DÁ COMIT SEM ERROS.
 	//VAIS SACAR UM PULL OH BOI
 //CAGUEI APRA TI PARA AS TUAS BADALHOCAS
+	//CAGA AS TUAS MAMIGAS ÀS 4 DA MANHA
 String id;
 List<Activity> o;
 JSONObject l=new JSONObject();
