@@ -10,16 +10,10 @@ import javax.servlet.http.HttpServletResponse;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import connector.ActivityRequestGetIMP;
 import connector.CollaboratorGETimp;
 import models.Collaborator;
-import models.Request_Activity;
 
-public class CollaboratorGet extends HttpServlet {
-
-	
-	
-	
+public class CollabGet extends HttpServlet {
 	JSONObject l=new JSONObject();	
 	List<Collaborator> o;	
 
@@ -46,36 +40,6 @@ public class CollaboratorGet extends HttpServlet {
 	        
 			
 			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-		}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+}
 	
 }
