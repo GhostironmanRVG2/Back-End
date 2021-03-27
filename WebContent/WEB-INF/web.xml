@@ -185,25 +185,7 @@
   <servlet-name>FactPost</servlet-name>
   <url-pattern>/FactPost</url-pattern>
   </servlet-mapping>
-  
-  
-  
-  
-  
-   <servlet>
-  <servlet-name>CollaboratorGet</servlet-name>
-  <servlet-class>CollaboratorGet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-  <servlet-name>CollaboratorGet</servlet-name>
-  <url-pattern>/CollaboratorGet</url-pattern>
-  </servlet-mapping>
-  
-  
-  
-  
-  
-  
+   
   <servlet>
   <servlet-name>ChildGet</servlet-name>
   <servlet-class>ChildGet</servlet-class>
@@ -424,7 +406,14 @@
   
   
   
-  
+   <servlet>
+  <servlet-name>CollabGet</servlet-name>
+  <servlet-class>CollabGet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>CollabGet</servlet-name>
+  <url-pattern>/CollaboratorGet</url-pattern>
+  </servlet-mapping>
   
   
   
