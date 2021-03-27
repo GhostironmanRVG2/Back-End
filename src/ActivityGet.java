@@ -16,6 +16,7 @@ import models.User;
 
 public class ActivityGet extends HttpServlet {
 	//VAMOS VER SE ISTO DÁ COMIT SEM ERROS.
+	//VAIS SACAR UM PULL OH BOI
 String id;
 List<Activity> o;
 JSONObject l=new JSONObject();
