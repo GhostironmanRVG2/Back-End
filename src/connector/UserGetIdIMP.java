@@ -15,7 +15,7 @@ public class UserGetIdIMP {
 		String PASSWORD="612a84b4";
 		String sql="Select * from heroku_062c2f3cf2f9e9d.user where email=?";
 		ResultSet rs;
-		User o=new User(4,"lol","lol");
+		User o=new User();
 	public User getByID(User user) {
 		// TODO Auto-generated method stub
 	
