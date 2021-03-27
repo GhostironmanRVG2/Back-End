@@ -7,6 +7,7 @@ public class Request_Activity {
 
 	String state,description,type,county,district,address,post_code,photo;
 	int id_institution,id_request;
+	float latitude,longitude;
 	Time time;
 	Date date;
 	
@@ -20,8 +21,10 @@ public class Request_Activity {
 		super();
 	}
 	public Request_Activity(Time time, Date date, String state, String description, String type, String county,
-			String district, String address, String post_code, String photo, int id_institution, int id_request) {
+			String district, String address,float latitude,float longitude ,String post_code, String photo, int id_institution, int id_request) {
 		super();
+		this.latitude=latitude;
+		this.longitude=longitude;
 		this.time = time;
 		this.date = date;
 		this.state = state;
@@ -34,6 +37,26 @@ public class Request_Activity {
 		this.photo = photo;
 		this.id_institution = id_institution;
 		this.id_request = id_request;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	public float getLatitude() {
+		return latitude;
+	}
+	public void setLatitude(float latitude) {
+		this.latitude = latitude;
+	}
+	public float getLongitude() {
+		return longitude;
+	}
+	public void setLongitude(float longitude) {
+		this.longitude = longitude;
 	}
 	public Time getTime() {
 		return time;

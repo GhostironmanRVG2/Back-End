@@ -54,6 +54,8 @@ public class ActivityRequestGetIMP {
 	            	String photo=rs.getString("photo");
 	            	Date date=rs.getDate("date");
 	            	Time time=rs.getTime("time");
+	            	float latitude=rs.getFloat("latitude");
+	            	float longitude=rs.getFloat("longitude");
 	            	
 	            	
 	            
@@ -61,7 +63,7 @@ public class ActivityRequestGetIMP {
 	            	
 	            	
 		           
-		            lista.add(new Request_Activity(time,date,state,description,type,county,district,address,post_code,photo,id_institution,id_request));
+		            lista.add(new Request_Activity(time,date,state,description,type,county,district,address,latitude,longitude,post_code,photo,id_institution,id_request));
 		            
 		             
 		           
