@@ -417,7 +417,14 @@
   
   
   
-  
+  <servlet>
+  <servlet-name>ActivityRequestFutureGet</servlet-name>
+  <servlet-class>ActivityRequestFutureGet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ActivityRequestFutureGet</servlet-name>
+  <url-pattern>/ActivityRequestFutureGet</url-pattern>
+  </servlet-mapping>
   
   
   
