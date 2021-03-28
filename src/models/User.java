@@ -1,7 +1,7 @@
 package models;
 
 public class User {
- String email,password,salt,login_type,status;
+ String email,password,salt,login_type,status,pass_changer;
  int id_user;
  
  
@@ -61,6 +61,14 @@ public void setPassword(String password) {
 
 
 
+
+public String getPass_changer() {
+	return pass_changer;
+}
+
+public void setPass_changer(String pass_changer) {
+	this.pass_changer = pass_changer;
+}
 
 public User(int id_user,String email,String login_type) {
 	super();

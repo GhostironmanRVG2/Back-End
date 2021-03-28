@@ -3,6 +3,7 @@ package connector;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import models.Fact;
@@ -29,7 +30,7 @@ int i;
 			ps.setString(2,description);
 			ps.setString(3, photo);
 			ps.setInt(4, id_fact);
-			i=ps.executeUpdate();
+			
 			
 			
 		} catch (SQLException | ClassNotFoundException e1) {

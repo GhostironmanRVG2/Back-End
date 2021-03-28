@@ -462,4 +462,31 @@
   
   
   
+   <servlet>
+  <servlet-name>PasswordPut</servlet-name>
+  <servlet-class>PasswordPut</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>PasswordPut</servlet-name>
+  <url-pattern>/PasswordPut</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  
+  
+   <servlet>
+  <servlet-name>CheckPassChangerPost</servlet-name>
+  <servlet-class>CheckPassChangerPost</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>CheckPassChangerPost</servlet-name>
+  <url-pattern>/CheckPassChangerPost</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
 </web-app>

@@ -7,8 +7,11 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Time;
+import java.util.ArrayList;
+import java.util.List;
 
 import models.Request_Activity;
+import models.Request_ActivityP;
 import models.Subscription;
 
 public class ActivityRequestByIdGetIMP {
@@ -16,10 +19,11 @@ public class ActivityRequestByIdGetIMP {
 	String URL="jdbc:mysql://eu-cdbr-west-03.cleardb.net:3306";
 	String USER="b59f6070236844";
 	String PASSWORD="612a84b4";
-	String sql="Select request_activity.id_request,request_activity.id_institution,request_activity.date,request_activity.time,request_activity.type,request_activity.county,request_activity.district,request_activity.address,request_activity.state,request_activity.post_code,request_activity.latitude,request_activity.longitude,request_activity.description,request_activity.photo from heroku_062c2f3cf2f9e9d.request_activity JOIN heroku_062c2f3cf2f9e9d.activity ON activity.id_request=request_activity.id_request JOIN heroku_062c2f3cf2f9e9d.subscription ON subscription.id_activity=activity.id_activity where id_child=? and subscription.state=?";
+	String sql="Select * from heroku_062c2f3cf2f9e9d.request_activity JOIN heroku_062c2f3cf2f9e9d.activity ON request_activity.id_request=activity.id_request JOIN heroku_062c2f3cf2f9e9d.subscription ON subscription.id_activity=activity.id_activity where subscription.id_child=? and subscription.state=?";
 	ResultSet rs;
+	List<Request_ActivityP> lista=new ArrayList<Request_ActivityP>();
 	Request_Activity o=new Request_Activity();
-	public Request_Activity Get(Subscription subs) {
+	public List<Request_ActivityP> Get(Subscription subs) {
 		// TODO Auto-generated method stub
 		  int id_child=subs.getId_child();
 			
@@ -31,7 +35,7 @@ public class ActivityRequestByIdGetIMP {
 						ps.setInt(1,id_child);
 						ps.setString(2, "close");
 				            rs=ps.executeQuery();
-				            rs.next();
+				           while( rs.next()) {
 				            int id_request=rs.getInt("id_request");
 			            	int id_institution =rs.getInt("id_institution");
 			            	String state=rs.getString("state");
@@ -46,30 +50,19 @@ public class ActivityRequestByIdGetIMP {
 			            	Time time=rs.getTime("time");
 			            	float latitude=rs.getFloat("latitude");
 			            	float longitude=rs.getFloat("longitude");
+			            	int points=rs.getInt("points");
+			                
 				          
-				            o.setAddress(address);
-				            o.setCounty(county);
-				            o.setDate(date);
-				            o.setDescription(description);
-				            o.setDistrict(district);
-				            o.setId_institution(id_institution);
-				            o.setId_request(id_request);
-				            o.setLatitude(latitude);
-				            o.setLongitude(longitude);
-				            o.setPhoto(photo);
-				            o.setPost_code(post_code);
-				            o.setTime(time);
-				            o.setState(state);
-				            o.setType(type);
+				            lista.add(new Request_ActivityP(time,date,state,description,type,county,district,address,latitude,longitude,post_code,photo,id_institution,id_request,points));
 				  
-						
+				           }
 						
 					} catch (SQLException | ClassNotFoundException e1) {
 						// TODO Auto-generated catch block
 						e1.printStackTrace();
 						
 					}
-					return o;
+					return lista;
 					
 				}
 		

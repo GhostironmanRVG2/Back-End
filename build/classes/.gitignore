@@ -1,2 +1,7 @@
 /SendEmail.class
 /SendEmail$1.class
+/connector/
+/models/
+/PasswordPut.class
+/CheckPassChangerGet.class
+/CheckPassChangerPost.class

@@ -27,10 +27,16 @@ public class UserGetIdIMP {
 					PreparedStatement ps=con.prepareStatement(sql);
 					ps.setString(1,e);
 			            rs=ps.executeQuery();
-			            rs.next();
+			            if(rs.next()) {
 			            o.setEmail(rs.getString("email"));
 			            o.setLoginT(rs.getString("login_type"));
 			            o.setID(rs.getInt("id_user"));
+			            }else {
+			            	
+			            o.setEmail(null);	
+			            	
+			            	
+			            }
 			            
 					
 					
