@@ -15,7 +15,7 @@ public class LoginIMP {
 	String PASSWORD="612a84b4";
 	String sql="Select * from heroku_062c2f3cf2f9e9d.user where email=?";
     ResultSet rs;
-    User o=new User(4,"lol","lol");
+    User o=new User();
 	public User LoginUser(User user) {
 		String e=user.getEmail();
 		//Connection to database and store value in
@@ -26,7 +26,17 @@ public class LoginIMP {
 					ps.setString(1,e);
 				    rs=ps.executeQuery();
 					if(rs.next()) {
-			        
+						if(rs.getString("status").equals("Active")) {
+			            o.setStatus(rs.getString("status"));
+						}else {
+							
+						o.setStatus("400");
+							
+							
+						}
+						
+						
+						
 			            o.setEmail(rs.getString("email"));
 			            o.setPassword(rs.getString("password"));
 			            o.setSalt(rs.getString("salt"));

@@ -19,7 +19,6 @@ public class Collaborator {
 
 	public Collaborator(int id_collaborator,int id_user,String name,int nif, String type, String address, String county, String district,
 			String post_code,int phone_number) {
-		super();
 		this.id_collaborator=id_collaborator;
 		this.name = name;
 		this.type = type;

@@ -17,7 +17,7 @@ public class ActivityReqFutureIMP {
 	String URL="jdbc:mysql://eu-cdbr-west-03.cleardb.net:3306";
 	String USER="b59f6070236844";
 	String PASSWORD="612a84b4";
-	String sql="Select * from heroku_062c2f3cf2f9e9d.request_activity where date>=CURDATE() and(date>=CURDATE() or time>=CURRENT_TIME())";
+	String sql="Select * from heroku_062c2f3cf2f9e9d.request_activity where (date=CURDATE() and time>=CURRENT_TIME()) OR date>CURDATE()";
     ResultSet rs; 
     List<Request_Activity> lista=new ArrayList<Request_Activity>();
 	public List<Request_Activity> Get() {

@@ -6,7 +6,7 @@ import java.sql.Time;
 public class Request_ActivityP {
 
 	String state,description,type,county,district,address,post_code,photo;
-	int id_institution,id_request,points;
+	int id_institution,id_request,points,total_points;
 	float latitude,longitude;
 	Time time;
 	Date date;
@@ -19,6 +19,7 @@ public class Request_ActivityP {
 	public Request_ActivityP(Time time, Date date, String state, String description, String type, String county,
 			String district, String address,float latitude,float longitude ,String post_code, String photo, int id_institution, int id_request,int points) {
 		super();
+		this.total_points=total_points;
 		this.points=points;
 		this.latitude=latitude;
 		this.longitude=longitude;
@@ -43,6 +44,12 @@ public class Request_ActivityP {
 	
 	
 	
+	public int getTotal_points() {
+		return total_points;
+	}
+	public void setTotal_points(int total_points) {
+		this.total_points = total_points;
+	}
 	public int getPoints() {
 		return points;
 	}

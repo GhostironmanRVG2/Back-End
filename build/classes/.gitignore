@@ -1,7 +1,5 @@
-/SendEmail.class
-/SendEmail$1.class
 /connector/
+/assets/
 /models/
-/PasswordPut.class
-/CheckPassChangerGet.class
-/CheckPassChangerPost.class
+/TotalPointsChildGet.class
+/ActivityRequestByIdRequestGet.class

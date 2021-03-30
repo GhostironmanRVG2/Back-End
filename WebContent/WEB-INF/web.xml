@@ -454,7 +454,7 @@
   </servlet>
   <servlet-mapping>
   <servlet-name>ActivityRequestByIdGet</servlet-name>
-  <url-pattern>/ActivityRequestByIdGet</url-pattern>
+  <url-pattern>/ActivityRequestByIdChildGet</url-pattern>
   </servlet-mapping>
   
   
@@ -486,6 +486,56 @@
   <url-pattern>/CheckPassChangerPost</url-pattern>
   </servlet-mapping>
   
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <servlet>
+  <servlet-name>SugestionPost</servlet-name>
+  <servlet-class>SugestionPost</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>SugestionPost</servlet-name>
+  <url-pattern>/SugestionPost</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  
+  
+  
+  <servlet>
+  <servlet-name>TotalPointsChildGet</servlet-name>
+  <servlet-class>TotalPointsChildGet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>TotalPointsChildGet</servlet-name>
+  <url-pattern>/TotalPointsChildGet</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  
+  <servlet>
+  <servlet-name>ActivityRequestByIdRequestGet</servlet-name>
+  <servlet-class>ActivityRequestByIdRequestGet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ActivityRequestByIdRequestGet</servlet-name>
+  <url-pattern>/ActivityRequestByIdRequestGet</url-pattern>
+  </servlet-mapping>
   
   
   

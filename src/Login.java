@@ -44,6 +44,9 @@ public class Login extends HttpServlet {
 				LoginIMP limp=new LoginIMP();
 				User o=limp.LoginUser(user);
 				//Verify password
+				
+				if(o.getStatus().equals("Active")) {
+				
 				if(o.getEmail()!="400") {
 				 String salt = o.getSalt();
 			        
@@ -123,8 +126,15 @@ public class Login extends HttpServlet {
 					
 				}
 				
+				}else {
+					
+				doGet(req,resp,400,null,null);
+					
+					
+				}
 			
 			}
+				
 	
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response,int cod,Object user,Object login) throws ServletException, IOException {
@@ -136,8 +146,6 @@ public class Login extends HttpServlet {
 		Collaborator c=new Collaborator();
 		if(cod==200) {
 	    try {
-	    	System.out.println(login.getClass());
-	    	System.out.println(i.getClass());
 	    	if(login.getClass().equals(i.getClass())) {
 			MSG.put("STATUS", M.getStatusS());
 			MSG.put("MSG", M.getStatusMsgS());

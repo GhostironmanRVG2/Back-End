@@ -4,6 +4,7 @@ public class Reward {
 	String name,photo;
 	int points;
 	int id_reward;
+	int id_child;
 	
 	public Reward() {
 		super();
@@ -15,6 +16,17 @@ public class Reward {
 		this.name = name;
 		this.photo = photo;
 		this.points = points;
+	}
+	
+	
+	
+
+	public int getId_child() {
+		return id_child;
+	}
+
+	public void setId_child(int id_child) {
+		this.id_child = id_child;
 	}
 
 	public int getId_reward() {

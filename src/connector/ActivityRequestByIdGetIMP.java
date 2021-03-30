@@ -19,7 +19,7 @@ public class ActivityRequestByIdGetIMP {
 	String URL="jdbc:mysql://eu-cdbr-west-03.cleardb.net:3306";
 	String USER="b59f6070236844";
 	String PASSWORD="612a84b4";
-	String sql="Select * from heroku_062c2f3cf2f9e9d.request_activity JOIN heroku_062c2f3cf2f9e9d.activity ON request_activity.id_request=activity.id_request JOIN heroku_062c2f3cf2f9e9d.subscription ON subscription.id_activity=activity.id_activity where subscription.id_child=? and subscription.state=?";
+	String sql="Select request_activity.id_request,request_activity.id_institution,request_activity.date,request_activity.time,request_activity.type,request_activity.county,request_activity.district,request_activity.address,request_activity.state,request_activity.post_code,request_activity.latitude,request_activity.longitude,request_activity.description,request_activity.photo,reward.points from heroku_062c2f3cf2f9e9d.request_activity JOIN heroku_062c2f3cf2f9e9d.activity ON request_activity.id_request=activity.id_request JOIN heroku_062c2f3cf2f9e9d.subscription ON subscription.id_activity=activity.id_activity JOIN heroku_062c2f3cf2f9e9d.reward ON reward.id_reward=activity.id_reward  where subscription.id_child=? and subscription.state=? and request_activity.date<CURDATE() OR (request_activity.date=CURDATE() and request_activity.time<=CURTIME())";
 	ResultSet rs;
 	List<Request_ActivityP> lista=new ArrayList<Request_ActivityP>();
 	Request_Activity o=new Request_Activity();
@@ -51,7 +51,6 @@ public class ActivityRequestByIdGetIMP {
 			            	float latitude=rs.getFloat("latitude");
 			            	float longitude=rs.getFloat("longitude");
 			            	int points=rs.getInt("points");
-			                
 				          
 				            lista.add(new Request_ActivityP(time,date,state,description,type,county,district,address,latitude,longitude,post_code,photo,id_institution,id_request,points));
 				  
