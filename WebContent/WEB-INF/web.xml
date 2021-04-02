@@ -581,6 +581,28 @@
   
   
   
+  <servlet>
+  <servlet-name>SubscriptionPut</servlet-name>
+  <servlet-class>SubscriptionPut</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>SubscriptionPut</servlet-name>
+  <url-pattern>/SubscriptionPut</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+   <servlet>
+  <servlet-name>SubscriptionEvaluationGet</servlet-name>
+  <servlet-class>SubscriptionEvaluationGet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>SubscriptionEvaluationGet</servlet-name>
+  <url-pattern>/SubscriptionEvaluationGet</url-pattern>
+  </servlet-mapping>
+  
   
   
   

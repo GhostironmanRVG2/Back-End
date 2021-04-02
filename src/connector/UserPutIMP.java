@@ -26,7 +26,7 @@ int i;
 			PreparedStatement ps=con.prepareStatement(sql);
 			ps.setString(1,email);
 			ps.setString(2,login_type);
-			ps.setInt(4, id_user);
+			ps.setInt(3, id_user);
 			i=ps.executeUpdate();
 			
 			
