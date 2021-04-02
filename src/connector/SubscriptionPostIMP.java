@@ -19,7 +19,7 @@ public class SubscriptionPostIMP {
                    String e=subs.getEvaluation();
                    String p1=subs.getPhoto_1();
                    String p2=subs.getPhoto_2();
-                   String s=subs.getState();
+                   String s="Ativo";
                    int id_activity=subs.getId_activity();
                    int id_child=subs.getId_child();
                 
