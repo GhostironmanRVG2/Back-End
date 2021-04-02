@@ -12,17 +12,17 @@ import org.json.JSONObject;
 
 import connector.ActivityReqFutureIMP;
 import connector.ActivityRequestGetIMP;
-import models.Request_Activity;
+import models.ActivityRequestJOIN;
 
 public class ActivityRequestFutureGet extends HttpServlet {
 
 	JSONObject l=new JSONObject();	
-	List<Request_Activity> o;	
+	List<ActivityRequestJOIN> o;	
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	        
 	        ActivityReqFutureIMP f =new ActivityReqFutureIMP();
-	        o=f.Get();
+	        o=f.ActivityRequestGet();
 	        
 	        try {
 				l.put("MSG", o);

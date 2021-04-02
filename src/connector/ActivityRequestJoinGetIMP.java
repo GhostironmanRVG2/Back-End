@@ -49,9 +49,11 @@ public class ActivityRequestJoinGetIMP {
 		            String address=rs.getString("address");
 		            String post_code=rs.getString("post_code");
 		            String photo=rs.getString("photo");
+		            float latitude=rs.getFloat("latitude");
+		            float longitude=rs.getFloat("longitude");
 
 		           
-		            lista.add(new ActivityRequestJOIN(id_request,id_activity,id_reward,time, date, state, description, type, county, district, address, post_code,photo,id_institution));
+		            lista.add(new ActivityRequestJOIN(id_request,id_reward,id_activity,time, date, state, description, type, county, district, address, post_code,latitude,longitude,photo,id_institution));
 		           
 		            
 		           

@@ -2,7 +2,7 @@ package models;
 
 public class Subscription {
 	String evaluation,photo_1,photo_2,state;
-	int points,id_activity,id_child;
+	int id_activity,id_child;
 	
 	
 	
@@ -35,12 +35,7 @@ public class Subscription {
 	public void setState(String state) {
 		this.state = state;
 	}
-	public int getPoints() {
-		return points;
-	}
-	public void setPoints(int points) {
-		this.points = points;
-	}
+
 	public int getId_activity() {
 		return id_activity;
 	}
@@ -53,14 +48,13 @@ public class Subscription {
 	public void setId_child(int id_child) {
 		this.id_child = id_child;
 	}
-	public Subscription(String evaluation, String photo_1, String photo_2, String state, int points, int id_activity,
+	public Subscription(String evaluation, String photo_1, String photo_2, String state, int id_activity,
 			int id_child) {
 		super();
 		this.evaluation = evaluation;
 		this.photo_1 = photo_1;
 		this.photo_2 = photo_2;
 		this.state = state;
-		this.points = points;
 		this.id_activity = id_activity;
 		this.id_child = id_child;
 	}

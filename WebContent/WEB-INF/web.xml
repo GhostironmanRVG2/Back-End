@@ -539,4 +539,43 @@
   
   
   
+  
+  
+  
+  
+  
+  
+   <servlet>
+  <servlet-name>SubscriptionPost</servlet-name>
+  <servlet-class>SubscriptionPost</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>SubscriptionPost</servlet-name>
+  <url-pattern>/SubscriptionPost</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  
+   <servlet>
+  <servlet-name>ActivityVerifyGet</servlet-name>
+  <servlet-class>ActivityVerifyGet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ActivityVerifyGet</servlet-name>
+  <url-pattern>/ActivityVerifyGet</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 </web-app>

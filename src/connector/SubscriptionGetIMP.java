@@ -33,12 +33,11 @@ public class SubscriptionGetIMP {
 	               int id_activity=rs.getInt("id_activity");
 	               int id_child=rs.getInt("id_child");
 	               String evaluation=rs.getString("evaluation");
-	               int points=rs.getInt("points");
 	               String photo_1=rs.getString("photo_1");
 	               String photo_2=rs.getString("photo_2");
 	               String state=rs.getString("state");
 		           
-		            lista.add(new Subscription(evaluation,photo_1,photo_2,state,points,id_activity,id_child));
+		            lista.add(new Subscription(evaluation,photo_1,photo_2,state,id_activity,id_child));
 		            
 		             
 		           

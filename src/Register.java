@@ -98,9 +98,6 @@ throws ServletException,IOException{
       // Protect user's password. The generated value can be stored in DB.
       String mySecurePassword = PasswordUtils.generateSecurePassword(p, salt);
       
-      // Print out protected password 
-      System.out.println("My secure password = " + mySecurePassword);
-      System.out.println("Salt value = " + salt);
 	//CRIACAO DO OBJETO
 	User user=new User();
 	user.setEmail(e);
@@ -160,7 +157,7 @@ throws ServletException,IOException{
 		
 		doGet(req,resp,200);
 		
-		System.out.println("Sucess");
+		
 		
 		
 		
@@ -168,14 +165,13 @@ throws ServletException,IOException{
 		
 		
 	}else {doGet(req,resp,400);
-	       System.out.println("Something went wrong");
-
+	       
 	
 	}
 }else {
 	
 	doGet(req,resp,401);
-	System.out.println("This email already exists");
+	
 	
 	
 	

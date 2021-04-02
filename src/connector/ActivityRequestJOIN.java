@@ -1,4 +1,4 @@
-package models;
+package connector;
 
 public class ActivityRequestJOIN {
 	int id_request,id_reward,id_activity;
