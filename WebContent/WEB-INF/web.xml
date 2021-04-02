@@ -538,5 +538,15 @@
   </servlet-mapping>
   
   
+  <servlet>
+  <servlet-name>SubscriptionDelete</servlet-name>
+  <servlet-class>SubscriptionDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>SubscriptionDelete</servlet-name>
+  <url-pattern>/SubscriptionDelete</url-pattern>
+  </servlet-mapping>
+  
+  
   
 </web-app>
