@@ -605,7 +605,26 @@
   
   
   
+    
   
+     <servlet>
+  <servlet-name>EvaluationRequestPut</servlet-name>
+  <servlet-class>EvaluationRequestPut</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>EvaluationRequestPut</servlet-name>
+  <url-pattern>/EvaluationRequestPut</url-pattern>
+  </servlet-mapping>
+  
+  
+       <servlet>
+  <servlet-name>EvaluationRequestGetId</servlet-name>
+  <servlet-class>EvaluationRequestGetId</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>EvaluationRequestGetId</servlet-name>
+  <url-pattern>/EvaluationRequestGetId</url-pattern>
+  </servlet-mapping>
   
   
   
