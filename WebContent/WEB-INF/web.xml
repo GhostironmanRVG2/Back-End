@@ -630,4 +630,16 @@
   
   
   
+     <servlet>
+  <servlet-name>ActivityRequestNonActivityGet</servlet-name>
+  <servlet-class>ActivityRequestNonActivityGet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ActivityRequestNonActivityGet</servlet-name>
+  <url-pattern>/ActivityRequestNonActivityGet</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
 </web-app>
