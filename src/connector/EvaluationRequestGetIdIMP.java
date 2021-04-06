@@ -31,11 +31,15 @@
 								ps.setInt(1,child);
 								ps.setInt(2, request);
 						            rs=ps.executeQuery();
-						           while( rs.next()) {
+						           if( rs.next()) {
 					            	float points=rs.getFloat("points");
 						          
 						            lista.add(new EvaluationRequest(points));
 						  
+						           }else {
+						        	   
+						        	 
+						        	   
 						           }
 								
 							} catch (SQLException | ClassNotFoundException e1) {

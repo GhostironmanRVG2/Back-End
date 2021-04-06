@@ -36,19 +36,36 @@ public class ActivityRequestNonActivityGetIMP {
 			            while(rs.next()) {
 			            	
 			            	int id_request=rs.getInt("id_request");
+			            	
 			            	int id_institution =rs.getInt("id_institution");
+			            	
 			            	String state=rs.getString("state");
+			            	
 			            	String description=rs.getString("description");
+			            	
 			            	String type=rs.getString("type");
+			            	
 			            	String county=rs.getString("county");
+			            	
 			            	String district=rs.getString("district");
+			            	
 			            	String address=rs.getString("address");
+			            	
 			            	String post_code=rs.getString("post_code");
+			            	
 			            	String photo=rs.getString("photo");
+			            	
 			            	Date date=rs.getDate("date");
+			            	
 			            	Time time=rs.getTime("time");
+			            	
 			            	float latitude=rs.getFloat("latitude");
+			            	
 			            	float longitude=rs.getFloat("longitude");
+			            	
+			            	
+			            	
+			           
 				            
 				            lista.add(new Request_Activity(time,date,state,description,type,county,district,address,latitude,longitude,post_code,photo,id_institution,id_request));
 				            

@@ -642,4 +642,41 @@
   
   
   
+  
+  
+     <servlet>
+  <servlet-name>evaluation_requestPost</servlet-name>
+  <servlet-class>evaluation_requestPost</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>evaluation_requestPost</servlet-name>
+  <url-pattern>/evaluation_requestPost</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+   <servlet>
+  <servlet-name>ChildPutByUser</servlet-name>
+  <servlet-class>ChildPutByUser</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ChildPutByUser</servlet-name>
+  <url-pattern>/ChildPutByUser</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+   <servlet>
+  <servlet-name>PhotoRewardByIdChildGet</servlet-name>
+  <servlet-class>PhotoRewardByIdChildGet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>PhotoRewardByIdChildGet</servlet-name>
+  <url-pattern>/PhotoRewardByIdChildGet</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
 </web-app>

@@ -18,7 +18,14 @@ public class Reward {
 		this.points = points;
 	}
 	
-	
+	public Reward(String photo) {
+		super();
+		this.photo=photo;
+		
+		
+		
+		
+	}
 	
 
 	public int getId_child() {

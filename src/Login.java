@@ -44,7 +44,7 @@ public class Login extends HttpServlet {
 				LoginIMP limp=new LoginIMP();
 				User o=limp.LoginUser(user);
 				//Verify password
-				
+				try {
 				if(o.getStatus().equals("Active")) {
 				
 				if(o.getEmail()!="400") {
@@ -132,6 +132,14 @@ public class Login extends HttpServlet {
 					
 					
 				}
+				
+				}catch(Exception lol) {
+					
+					doGet(req,resp,400,null,null);
+					
+					
+					
+				}
 			
 			}
 				
@@ -199,4 +207,7 @@ public class Login extends HttpServlet {
 		    out.print(MSG);
 		    out.flush();   
 	}
+	
+	
+	
 }

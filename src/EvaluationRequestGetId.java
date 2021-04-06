@@ -38,20 +38,40 @@ import connector.EvaluationRequestGetIdIMP;
 			
 			//JSON OBJECT
 			JSONObject MSG=new JSONObject();
+			if(!(l.isEmpty())) {
 			try {
 				MSG.put("MSG", l);
+				MSG.put("STATUS", "200");
 			} catch (JSONException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			
-			 PrintWriter out = response.getWriter();
+			 
+			}else {
+				
+				try {
+					MSG.put("STATUS", "400");
+					MSG.put("MSG", "NO ROWS OH MIGUEL");
+				} catch (JSONException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+				
+				
+				
+			}
+	
+			
+			PrintWriter out = response.getWriter();
 			    response.setContentType("application/json");
 			    response.setCharacterEncoding("UTF-8");
 			    out.print(MSG);
 			    out.flush();   
 			
-	
+			
+			
 			
 		}
 		
