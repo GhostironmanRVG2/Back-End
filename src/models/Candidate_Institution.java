@@ -4,7 +4,7 @@ package models;
 
 public class Candidate_Institution {
 
-	String name,type,address,county,district,post_code;
+	String name,address,county,district,post_code;
 	int nif,phone_number,id_candidate;
 	
 	
