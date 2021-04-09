@@ -719,4 +719,17 @@
   <url-pattern>/InstitutionCandidateGet</url-pattern>
   </servlet-mapping>
   
+  
+  
+               <servlet>
+  <servlet-name>ActivityCandidateJoinGet</servlet-name>
+  <servlet-class>ActivityCandidateJoinGet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ActivityCandidateJoinGet</servlet-name>
+  <url-pattern>/ActivityCandidateJoinGet</url-pattern>
+  </servlet-mapping>  
+  
+  
+  
 </web-app>
