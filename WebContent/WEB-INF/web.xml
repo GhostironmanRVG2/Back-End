@@ -722,13 +722,13 @@
   
   
                <servlet>
-  <servlet-name>ActivityCandidateJoinGet</servlet-name>
-  <servlet-class>ActivityCandidateJoinGet</servlet-class>
+  <servlet-name>InstitutionCandidateJoinGet</servlet-name>
+  <servlet-class>InstitutionCandidateJoinGet</servlet-class>
   </servlet>
   <servlet-mapping>
-  <servlet-name>ActivityCandidateJoinGet</servlet-name>
-  <url-pattern>/ActivityCandidateJoinGet</url-pattern>
-  </servlet-mapping>  
+  <servlet-name>InstitutionCandidateJoinGet</servlet-name>
+  <url-pattern>/InstitutionCandidateJoinGet</url-pattern>
+  </servlet-mapping> 
   
   
   
