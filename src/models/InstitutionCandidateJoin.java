@@ -1,13 +1,13 @@
 package models;
 
-public class ActivityCandidateJoin {
+public class InstitutionCandidateJoin {
 
 	
 	String name,address,county,district,post_code;
 	int nif,phone_number,id_candidate,id_institution, id_user;
 	
 	
-	public ActivityCandidateJoin(int id_candidate, int id_institution, int id_user, String name, String address, String county, String district,
+	public InstitutionCandidateJoin(int id_candidate, int id_institution, int id_user, String name, String address, String county, String district,
 			String post_code, int nif, int phone_number) {
 		super();
 		this.id_candidate = id_candidate;

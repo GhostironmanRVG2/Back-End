@@ -11,24 +11,24 @@ import java.sql.Time;
 import java.util.ArrayList;
 import java.util.List;
 
-import models.ActivityCandidateJoin;
+import models.InstitutionCandidateJoin;
 import models.Reward;
 
-public class ActivityCandidateJoinGetIMP {
+public class InstitutionCandidateJoinGetIMP {
 	String DRIVER="com.mysql.jdbc.Driver";
 	String URL="jdbc:mysql://eu-cdbr-west-03.cleardb.net:3306";
 	String USER="b59f6070236844";
 	String PASSWORD="612a84b4";
 	String sql="Select candidate_institution.id_candidate, institution.id_institution, institution.id_user, candidate_institution.name, candidate_institution.address, candidate_institution.county, candidate_institution.district, candidate_institution.post_code, candidate_institution.nif, candidate_institution.phone_number  from heroku_062c2f3cf2f9e9d.candidate_institution JOIN heroku_062c2f3cf2f9e9d.institution ON candidate_institution.id_candidate = institution.id_candidate";
     ResultSet rs; 
-    List<ActivityCandidateJoin> lista=new ArrayList<ActivityCandidateJoin>();
+    List<InstitutionCandidateJoin> lista=new ArrayList<InstitutionCandidateJoin>();
 
 	
 	
 	
 	
 	
-	public List<ActivityCandidateJoin> ActivityCandidateJoinGETAll() {
+	public List<InstitutionCandidateJoin> ActivityCandidateJoinGETAll() {
 		// TODO Auto-generated method stub
 		
 		
@@ -56,7 +56,7 @@ public class ActivityCandidateJoinGetIMP {
 	            	
 	            
 	           
-		            lista.add(new ActivityCandidateJoin(id_candidate,id_institution,id_user,name,address,county,district,post_code,nif,phone_number));
+		            lista.add(new InstitutionCandidateJoin(id_candidate,id_institution,id_user,name,address,county,district,post_code,nif,phone_number));
 		            
 		             
 		           

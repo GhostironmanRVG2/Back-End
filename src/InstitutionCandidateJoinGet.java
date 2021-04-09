@@ -11,20 +11,20 @@ import javax.servlet.http.HttpServletResponse;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import connector.ActivityCandidateJoinGetIMP;
+import connector.InstitutionCandidateJoinGetIMP;
 import connector.RewardGetIMP;
-import models.ActivityCandidateJoin;
+import models.InstitutionCandidateJoin;
 import models.Reward;
 
-public class ActivityCandidateJoinGet extends HttpServlet {
+public class InstitutionCandidateJoinGet extends HttpServlet {
 
 	
 	JSONObject l=new JSONObject();	
-	List<ActivityCandidateJoin> o;	
+	List<InstitutionCandidateJoin> o;	
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	        
-		ActivityCandidateJoinGetIMP RGAI=new ActivityCandidateJoinGetIMP();
+		InstitutionCandidateJoinGetIMP RGAI=new InstitutionCandidateJoinGetIMP();
 	        o=RGAI.ActivityCandidateJoinGETAll();
 	        
 	        
