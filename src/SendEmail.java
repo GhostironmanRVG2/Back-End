@@ -109,6 +109,7 @@ public class SendEmail extends HttpServlet {
             k.put("STATUS", 200);
             k.put("MSG", "EMAIL SENDED WITH SUCESS");
             k.put("email", user.getEmail());
+            k.put("PATH", "IdentifyCodeActivity");
             out.print(k);
             
 

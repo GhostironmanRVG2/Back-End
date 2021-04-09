@@ -38,6 +38,7 @@ public class InstitutionCandidateGETimp {
                  String district=rs.getString("district");
                  String post_code=rs.getString("post_code");
                  int phone_number=rs.getInt("phone_number");
+                 int id_user=rs.getInt("id_user");
 	            
 	            	
 	            
@@ -45,7 +46,7 @@ public class InstitutionCandidateGETimp {
 	            	
 	            	
 		           
-		            lista.add(new Candidate_Institution(id_candidate,name,address,county,district,post_code,nif,phone_number));
+		            lista.add(new Candidate_Institution(id_candidate,name,address,county,district,post_code,nif,phone_number,id_user));
 		            
 		             
 		           

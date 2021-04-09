@@ -33,6 +33,7 @@ public class CheckPassChangerPost extends HttpServlet {
     	try {
 			p.put("STATUS", "200");
 			p.put("MSG","THATS THE CODE");
+			p.put("PATH", "PasswordChangeActivity");
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -5,7 +5,7 @@ package models;
 public class Candidate_Institution {
 
 	String name,address,county,district,post_code;
-	int nif,phone_number,id_candidate;
+	int nif,phone_number,id_candidate,id_user;
 	
 	
 	
@@ -17,8 +17,9 @@ public class Candidate_Institution {
 	public Candidate_Institution() {
 		super();
 	}
-	public Candidate_Institution(int id_candidate, String name, String address, String county, String district, String post_code, int nif, int phone_number) {
+	public Candidate_Institution(int id_candidate, String name, String address, String county, String district, String post_code, int nif, int phone_number,int id_user) {
 		super();
+		this.id_user=id_user;
 		this.name = name;
 		this.address = address;
 		this.county = county;
@@ -27,6 +28,16 @@ public class Candidate_Institution {
 		this.nif = nif;
 		this.phone_number = phone_number;
 		this.id_candidate = id_candidate;
+	}
+	
+	
+	
+	
+	public int getId_user() {
+		return id_user;
+	}
+	public void setId_user(int id_user) {
+		this.id_user = id_user;
 	}
 	public String getName() {
 		return name;

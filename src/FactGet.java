@@ -34,8 +34,7 @@ public class FactGet extends HttpServlet {
 			
 			
 			 PrintWriter out = response.getWriter();
-			    response.setContentType("application/json");
-			    response.setCharacterEncoding("iso-8859-1");
+			 response.setContentType("application/json; charset=ISO-8859-1");
 			    try {
 					out.print(l.get("MSG"));
 				} catch (JSONException e) {

@@ -732,4 +732,32 @@
   
   
   
+  
+  
+  
+  
+   <servlet>
+  <servlet-name>RegisterInstitution</servlet-name>
+  <servlet-class>RegisterInstitution</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>RegisterInstitution</servlet-name>
+  <url-pattern>/RegisterInstitution</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+   <servlet>
+  <servlet-name>InstitutionActivate</servlet-name>
+  <servlet-class>InstitutionActivate</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>InstitutionActivate</servlet-name>
+  <url-pattern>/InstitutionActivate</url-pattern>
+  </servlet-mapping>
+  
+  
 </web-app>

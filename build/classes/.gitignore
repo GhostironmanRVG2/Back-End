@@ -1,1 +1,9 @@
+/InsitutionGet.class
+/InstitutionCandidateGet.class
+/NrFactGet.class
+/NrInstitutionGET.class
+/NrRequestNotActivityGET.class
 /connector/
+/models/
+/ActivityCandidateJoinGet.class
+/InstitutionActivate.class
