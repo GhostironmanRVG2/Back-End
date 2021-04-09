@@ -17,7 +17,7 @@ import connector.UserGetIdIMP;
 import models.Candidate_Institution;
 import models.User;
 
-public class RegisterInstitution extends HttpServlet {
+public class RegisterUserInstitution extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response,int cod) throws ServletException, IOException {
 		// TODO Auto-generated method stub
@@ -71,16 +71,7 @@ public class RegisterInstitution extends HttpServlet {
 		 Candidate_Institution c=new Candidate_Institution();
 		 String p=req.getParameter("password");
 		 String e=req.getParameter("email");
-		 String name=req.getParameter("name");
-		 String n=req.getParameter("nif");
-		 int nif=Integer.valueOf(n);
-		 String address=req.getParameter("address");
-		 String county=req.getParameter("county");
-		 String district=req.getParameter("district");
-		 String post_code=req.getParameter("post_code");
-		 String ph=req.getParameter("phone_number");
-		 int phone_number=Integer.valueOf(ph);
-		 String status="Inactive";
+		 String status="Active";
 		 String lt="Institution";
 	      
 	      // Generate Salt. The generated value can be stored in DB. 
@@ -111,32 +102,6 @@ public class RegisterInstitution extends HttpServlet {
 		user.setSalt(salt);
 		RegisterIMP rimp=new RegisterIMP();
 		int i=rimp.registerUser(user);
-		if(i>0) {
-			//SACAR O ID DO USER ATRAVES DO EMAIL
-			User k=new User();
-			k.setEmail(e);
-			UserGetIdIMP j=new UserGetIdIMP();
-			User l=j.getByID(k);
-			//ID DO USER
-			int id_user=l.getID();
-			
-		
-			
-			
-			
-			
-			
-			//Realizar o post , coisa linda zé carlos
-			c.setNif(nif);
-			c.setAddress(address);
-			c.setCounty(county);
-			c.setDistrict(district);
-			c.setName(name);
-			c.setPhone_number(phone_number);
-			c.setPost_code(post_code);
-			c.setId_user(id_user);
-			InstitutionPostIMP I=new InstitutionPostIMP();
-			I.Post(c);
 						
 					
 			
@@ -151,11 +116,6 @@ public class RegisterInstitution extends HttpServlet {
 			
 			
 			
-			
-		}else {doGet(req,resp,400);
-		       
-		
-		}
 	}else {
 		
 		doGet(req,resp,401);

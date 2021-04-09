@@ -737,26 +737,26 @@
   
   
    <servlet>
-  <servlet-name>RegisterInstitution</servlet-name>
-  <servlet-class>RegisterInstitution</servlet-class>
+  <servlet-name>RegisterUserInstitution</servlet-name>
+  <servlet-class>RegisterUserInstitution</servlet-class>
 
   </servlet>
   <servlet-mapping>
-  <servlet-name>RegisterInstitution</servlet-name>
-  <url-pattern>/RegisterInstitution</url-pattern>
+  <servlet-name>RegisterUserInstitution</servlet-name>
+  <url-pattern>/RegisterUserInstitution</url-pattern>
   </servlet-mapping>
   
   
   
   
    <servlet>
-  <servlet-name>InstitutionActivate</servlet-name>
-  <servlet-class>InstitutionActivate</servlet-class>
+  <servlet-name>InstitutionPost</servlet-name>
+  <servlet-class>InstitutionPost</servlet-class>
 
   </servlet>
   <servlet-mapping>
-  <servlet-name>InstitutionActivate</servlet-name>
-  <url-pattern>/InstitutionActivate</url-pattern>
+  <servlet-name>InstitutionPost</servlet-name>
+  <url-pattern>/InstitutionPost</url-pattern>
   </servlet-mapping>
   
   

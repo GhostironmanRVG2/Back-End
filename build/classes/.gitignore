@@ -7,3 +7,6 @@
 /models/
 /ActivityCandidateJoinGet.class
 /InstitutionActivate.class
+/InstitutionCandidateJoinGet.class
+/RegisterUserInstitution.class
+/InstitutionPost.class
