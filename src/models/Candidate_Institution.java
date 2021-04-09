@@ -17,10 +17,9 @@ public class Candidate_Institution {
 	public Candidate_Institution() {
 		super();
 	}
-	public Candidate_Institution(int id_candidate, String name, String type, String address, String county, String district, String post_code, int nif, int phone_number) {
+	public Candidate_Institution(int id_candidate, String name, String address, String county, String district, String post_code, int nif, int phone_number) {
 		super();
 		this.name = name;
-		this.type = type;
 		this.address = address;
 		this.county = county;
 		this.district = district;
@@ -34,12 +33,6 @@ public class Candidate_Institution {
 	}
 	public void setName(String name) {
 		this.name = name;
-	}
-	public String getType() {
-		return type;
-	}
-	public void setType(String type) {
-		this.type = type;
 	}
 	public String getAddress() {
 		return address;
