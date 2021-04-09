@@ -199,22 +199,6 @@
   
   
   
-  
-  
-   
-  <servlet>
-  <servlet-name>InstitutionGet</servlet-name>
-  <servlet-class>InstitutionGet</servlet-class>
-
-  </servlet>
-  <servlet-mapping>
-  <servlet-name>InstitutionGet</servlet-name>
-  <url-pattern>/InstitutionGet</url-pattern>
-  </servlet-mapping>
-  
-  
-  
-  
   <servlet>
   <servlet-name>FactGet</servlet-name>
   <servlet-class>FactGet</servlet-class>
@@ -677,6 +661,62 @@
   </servlet-mapping>
   
   
+    
+         <servlet>
+  <servlet-name>NrInstitutionGET</servlet-name>
+  <servlet-class>NrInstitutionGET</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>NrInstitutionGET</servlet-name>
+  <url-pattern>/NrInstitutionGET</url-pattern>
+  </servlet-mapping>
   
+  
+  
+  
+  
+           <servlet>
+  <servlet-name>NrFactGet</servlet-name>
+  <servlet-class>NrFactGet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>NrFactGet</servlet-name>
+  <url-pattern>/NrFactGet</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+             <servlet>
+  <servlet-name>NrRequestNotActivityGET</servlet-name>
+  <servlet-class>NrRequestNotActivityGET</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>NrRequestNotActivityGET</servlet-name>
+  <url-pattern>/NrRequestNotActivityGET</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+             <servlet>
+  <servlet-name>InsitutionGet</servlet-name>
+  <servlet-class>InsitutionGet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>InsitutionGet</servlet-name>
+  <url-pattern>/InsitutionGet</url-pattern>
+  </servlet-mapping>  
+  
+   
+   
+  <servlet>
+  <servlet-name>InstitutionCandidateGet</servlet-name>
+  <servlet-class>InstitutionCandidateGet</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>InstitutionCandidateGet</servlet-name>
+  <url-pattern>/InstitutionCandidateGet</url-pattern>
+  </servlet-mapping>
   
 </web-app>
