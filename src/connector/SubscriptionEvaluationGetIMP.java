@@ -10,10 +10,10 @@ import models.Subscription;
 
 public class SubscriptionEvaluationGetIMP {
 	String DRIVER="com.mysql.jdbc.Driver";
-	String URL="jdbc:mysql://eu-cdbr-west-03.cleardb.net:3306";
-	String USER="b59f6070236844";
-	String PASSWORD="612a84b4";
-	String sql="Select * from heroku_062c2f3cf2f9e9d.subscription where id_child=? and id_activity=?";
+	String URL="jdbc:mysql://localhost:3306";
+	String USER="BD";
+	String PASSWORD="12341234";
+	String sql="Select * from dai.subscription where id_child=? and id_activity=?";
 	Subscription result=new Subscription();
 	public Subscription get(Subscription subs) {
 		// TODO Auto-generated method stub

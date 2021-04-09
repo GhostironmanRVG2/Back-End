@@ -10,10 +10,10 @@ import models.Reward;
 
 public class TotalPointsChildGetIMP {
 	String DRIVER="com.mysql.jdbc.Driver";
-	String URL="jdbc:mysql://eu-cdbr-west-03.cleardb.net:3306";
-	String USER="b59f6070236844";
-	String PASSWORD="612a84b4";
-	String sql="Select SUM(points) AS total_points from heroku_062c2f3cf2f9e9d.reward JOIN heroku_062c2f3cf2f9e9d.activity ON reward.id_reward=activity.id_reward JOIN heroku_062c2f3cf2f9e9d.subscription ON activity.id_activity=subscription.id_activity  where id_child=?";
+	String URL="jdbc:mysql://localhost:3306";
+	String USER="BD";
+	String PASSWORD="12341234";
+	String sql="Select SUM(points) AS total_points from dai.reward JOIN dai.activity ON reward.id_reward=activity.id_reward JOIN dai.subscription ON activity.id_activity=subscription.id_activity  where id_child=?";
 	Reward result=new Reward();
 	ResultSet rs;
 	public Reward get(Reward r) {

@@ -1,6 +1,7 @@
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.mail.Session;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -30,6 +31,7 @@ public class RegisterStaff extends HttpServlet {
 			MSG.put("STATUS", M.getStatusS());
 			MSG.put("MSG", M.getStatusMsgS());
 			MSG.put("PATH", M.getMobilePathS());
+			
 			
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
@@ -111,9 +113,7 @@ public class RegisterStaff extends HttpServlet {
 			      // Protect user's password. The generated value can be stored in DB.
 			      String mySecurePassword = PasswordUtils.generateSecurePassword(p, salt);
 			      
-			      // Print out protected password 
-			      System.out.println("My secure password = " + mySecurePassword);
-			      System.out.println("Salt value = " + salt);
+		
 				//CRIACAO DO OBJETO
 				User user=new User();
 				user.setEmail(e);

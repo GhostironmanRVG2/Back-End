@@ -9,10 +9,10 @@ import models.Activity;
 
 public class ActivityPutIMP {
 	String DRIVER="com.mysql.jdbc.Driver";
-	String URL="jdbc:mysql://eu-cdbr-west-03.cleardb.net:3306";
-	String USER="b59f6070236844";
-	String PASSWORD="612a84b4";
-String sql="Update heroku_062c2f3cf2f9e9d.Activity set id_request=?,id_reward=? where id_activity=? ";
+	String URL="jdbc:mysql://localhost:3306";
+	String USER="BD";
+	String PASSWORD="12341234";
+String sql="Update dai.activity set id_request=?,id_reward=? where id_activity=? ";
 int i;
 	public int ActivityDoPut(Activity a) {
 		// extract

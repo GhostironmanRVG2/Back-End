@@ -13,10 +13,10 @@ import models.User;
 
 public class PhotoRewardByIdChildGetIMP {
 	String DRIVER="com.mysql.jdbc.Driver";
-	String URL="jdbc:mysql://eu-cdbr-west-03.cleardb.net:3306";
-	String USER="b59f6070236844";
-	String PASSWORD="612a84b4";
-	String sql="Select reward.photo from heroku_062c2f3cf2f9e9d.reward JOIN heroku_062c2f3cf2f9e9d.activity ON activity.id_reward=reward.id_reward JOIN heroku_062c2f3cf2f9e9d.subscription ON subscription.id_activity=activity.id_activity where id_child=? and subscription.state='closed'";
+	String URL="jdbc:mysql://localhost:3306";
+	String USER="BD";
+	String PASSWORD="12341234";
+	String sql="Select reward.photo from dai.reward JOIN dai.activity ON activity.id_reward=reward.id_reward JOIN dai.subscription ON subscription.id_activity=activity.id_activity where id_child=? and subscription.state='closed'";
     ResultSet rs; 
     List<Reward> lista=new ArrayList<Reward>();
 	public List<Reward> get(Reward r) {

@@ -9,11 +9,11 @@ import models.Sugestion;
 
 public class SugestionPostIMP {
 	String DRIVER="com.mysql.jdbc.Driver";
-	String URL="jdbc:mysql://eu-cdbr-west-03.cleardb.net:3306";
-	String USER="b59f6070236844";
-	String PASSWORD="612a84b4";
-	String sql="Insert into heroku_062c2f3cf2f9e9d.sugestion (id_child,title,designation) VALUE (?,?,?)";
-	String sqlnull="Insert into heroku_062c2f3cf2f9e9d.sugestion (id_child,designation) VALUE (?,?)";
+	String URL="jdbc:mysql://localhost:3306";
+	String USER="BD";
+	String PASSWORD="12341234";
+	String sql="Insert into dai.sugestion (id_child,title,designation) VALUE (?,?,?)";
+	String sqlnull="Insert into dai.sugestion (id_child,designation) VALUE (?,?)";
 	int i;
 		public int insertSugestion(Sugestion sugestion) {
 			// TODO Auto-generated method stub

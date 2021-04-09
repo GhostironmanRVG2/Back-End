@@ -10,10 +10,10 @@ import models.Fact;
 
 public class CollabPostIMP {
 	String DRIVER="com.mysql.jdbc.Driver";
-	String URL="jdbc:mysql://eu-cdbr-west-03.cleardb.net:3306";
-	String USER="b59f6070236844";
-	String PASSWORD="612a84b4";
-	String sql="Insert into heroku_062c2f3cf2f9e9d.collaborator (id_user,name,nif,type,address,county,district,post_code,phone_number) VALUE (?,?,?,?,?,?,?,?,?)";
+	String URL="jdbc:mysql://localhost:3306";
+	String USER="BD";
+	String PASSWORD="12341234";
+	String sql="Insert into dai.collaborator (id_user,name,nif,type,address,county,district,post_code,phone_number) VALUE (?,?,?,?,?,?,?,?,?)";
 	int i;
 		public int insertCollab(Collaborator c) {
 			// TODO Auto-generated method stub

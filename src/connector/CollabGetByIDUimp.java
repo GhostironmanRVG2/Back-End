@@ -12,10 +12,10 @@ import models.User;
 
 public class CollabGetByIDUimp {
 	String DRIVER="com.mysql.jdbc.Driver";
-	String URL="jdbc:mysql://eu-cdbr-west-03.cleardb.net:3306";
-	String USER="b59f6070236844";
-	String PASSWORD="612a84b4";
-	String sql="Select * from heroku_062c2f3cf2f9e9d.collaborator where id_user=?";
+	String URL="jdbc:mysql://localhost:3306";
+	String USER="BD";
+	String PASSWORD="12341234";
+	String sql="Select * from dai.collaborator where id_user=?";
 	ResultSet rs;
 	Collaborator c=new Collaborator(1,1,"lol",1,"lol","lol","lol","lol","lol",2);
 	public Collaborator Get(User user) {

@@ -9,10 +9,10 @@ import models.Subscription;
 
 public class SubscriptionDeleteIMP {
 	String DRIVER="com.mysql.jdbc.Driver";
-	String URL="jdbc:mysql://eu-cdbr-west-03.cleardb.net:3306";
-	String USER="b59f6070236844";
-	String PASSWORD="612a84b4";
-	String sql="delete from heroku_062c2f3cf2f9e9d.subscription where id_activity = ? and id_child = ?";
+	String URL="jdbc:mysql://localhost:3306";
+	String USER="BD";
+	String PASSWORD="12341234";
+	String sql="delete from dai.subscription where id_activity = ? and id_child = ?";
 	int i;
 	int idc;
 	int ida;

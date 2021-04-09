@@ -9,10 +9,10 @@ import models.Request_Activity;
 
 public class UploadPutRAimp {
 	String DRIVER="com.mysql.jdbc.Driver";
-	String URL="jdbc:mysql://eu-cdbr-west-03.cleardb.net:3306";
-	String USER="b59f6070236844";
-	String PASSWORD="612a84b4";
-	String sql="Update heroku_062c2f3cf2f9e9d.request_activity set photo=? where id_request=? ";
+	String URL="jdbc:mysql://localhost:3306";
+	String USER="BD";
+	String PASSWORD="12341234";
+	String sql="Update dai.request_activity set photo=? where id_request=? ";
 	int i;
 	public int upload(Request_Activity r) {
 		String p=r.getPhoto();

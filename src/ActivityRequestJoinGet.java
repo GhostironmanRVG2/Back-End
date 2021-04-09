@@ -35,7 +35,12 @@ public class ActivityRequestJoinGet extends HttpServlet {
 		 PrintWriter out = response.getWriter();
 		    response.setContentType("application/json");
 		    response.setCharacterEncoding("UTF-8");
-		    out.print(l);
+		    try {
+				out.print(l.get("MSG"));
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		    out.flush();   
         
 

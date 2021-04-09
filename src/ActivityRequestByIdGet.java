@@ -45,7 +45,12 @@ public class ActivityRequestByIdGet extends HttpServlet {
 		 PrintWriter out = response.getWriter();
 		    response.setContentType("application/json");
 		    response.setCharacterEncoding("UTF-8");
-		    out.print(MSG);
+		    try {
+				out.print(MSG.get("MSG"));
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		    out.flush();   
 		
 		

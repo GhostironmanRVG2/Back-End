@@ -13,10 +13,10 @@ import models.Sugestion;
 
 public class SugestionGetIMP {
 	String DRIVER="com.mysql.jdbc.Driver";
-	String URL="jdbc:mysql://eu-cdbr-west-03.cleardb.net:3306";
-	String USER="b59f6070236844";
-	String PASSWORD="612a84b4";
-	String sql="Select * from heroku_062c2f3cf2f9e9d.sugestion";
+	String URL="jdbc:mysql://localhost:3306";
+	String USER="BD";
+	String PASSWORD="12341234";
+	String sql="Select * from dai.sugestion";
     ResultSet rs; 
     List<Sugestion> lista=new ArrayList<Sugestion>();
 	public List<Sugestion> GetAll() {

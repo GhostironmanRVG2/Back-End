@@ -1,5 +1,6 @@
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Arrays;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -27,21 +28,44 @@ JSONObject l=new JSONObject();
         
         ActivityGetIMP AGI=new ActivityGetIMP();
         o=AGI.ActivityGet();
-        
-        
-        try {
-			l.put("MSG", o);
-		} catch (JSONException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
 		
 		
 		 PrintWriter out = response.getWriter();
 		    response.setContentType("application/json");
 		    response.setCharacterEncoding("UTF-8");
-		    out.print(l);
-		    out.flush();   
+		    //CRIAS O OBJETO JSON
+		    try {
+				l.put("MSG", o);
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		    
+		    
+		    
+		   	//
+		   	try { 
+				out.print(l.get("MSG"));
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		   	
+		   	
+		    
+		    	
+		    	
+		    	
+		    }
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		     
         
         
 		
@@ -70,4 +94,3 @@ JSONObject l=new JSONObject();
 	
 	
 	
-}

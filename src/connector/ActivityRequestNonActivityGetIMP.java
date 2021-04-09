@@ -16,10 +16,10 @@ import models.Request_Activity;
 public class ActivityRequestNonActivityGetIMP {
 	
 	String DRIVER="com.mysql.jdbc.Driver";
-	String URL="jdbc:mysql://eu-cdbr-west-03.cleardb.net:3306";
-	String USER="b59f6070236844";
-	String PASSWORD="612a84b4";
-	String sql="Select * from heroku_062c2f3cf2f9e9d.request_activity where id_request not in (Select id_request from heroku_062c2f3cf2f9e9d.Activity) ";
+	String URL="jdbc:mysql://localhost:3306";
+	String USER="BD";
+	String PASSWORD="12341234";
+	String sql="Select * from dai.request_activity where id_request not in (Select id_request from dai.Activity) ";
     ResultSet rs;
     List<Request_Activity> lista=new ArrayList<Request_Activity>();
 	public List<Request_Activity> get() {

@@ -51,7 +51,6 @@ public class Login extends HttpServlet {
 				 String salt = o.getSalt();
 			        
 			        boolean passwordMatch = PasswordUtils.verifyUserPassword(user.getPassword(), o.getPassword(), salt);
-			        
 			        if(passwordMatch) 
 			        	
 			        {   
@@ -73,9 +72,11 @@ public class Login extends HttpServlet {
 			            	
 			            	
 			            	
-			           }else {
+			           }else if(k.loginT().equals("Collaborator")) {
 			            	
-			            	
+			        	   //SACAR LOGIN TYPE
+				            UserGetIdIMP lol=new UserGetIdIMP();
+				            User l =rev.getByID(user);
 			            	
 			            	//CRIAR AS MERDAS COLLAB
 			            	
@@ -92,12 +93,19 @@ public class Login extends HttpServlet {
 					        session.setAttribute("post_code",ñ.getPost_code());
 					        session.setAttribute("type", ñ.getType());
 					        session.setAttribute("id_collaborator", ñ.getId_collaborator());
-					        doGet(req,resp,200,null,ñ);
+					        doGet(req,resp,200,l,ñ);
 			            	
 			            	
 			            	
 			            	
 			            	
+			            	
+			            	
+			            	
+			            }else {
+			            	
+			            	
+			            	System.out.println("Instituicao");
 			            	
 			            	
 			            	
@@ -171,13 +179,40 @@ public class Login extends HttpServlet {
 			MSG.put("birth_date",i.getBirth_date() );
 			MSG.put("name",i.getName() );
 			MSG.put("photo",i.getPhoto() );
+			 MSG.put("PathWeb", "backoffice/CM_index.html");
 			
 			
 			
 			
-			
-	    	}else { 
+	    	}else if(login.getClass().equals(c.getClass())){
+	    	MSG.put("STATUS", M.getStatusS());
+	    	MSG.put("MSG",M.getStatusMsgS() );
+	    	
+	    	//dados user
+	    	h=(User)user;
+	    	MSG.put("id_user",h.getID() );
+			MSG.put("email",h.getEmail() );
+			MSG.put("status_user",h.getStatus());
+	    	//dados collab
+	    	c=(Collaborator)login;
+	    	MSG.put("id_collaborator",c.getId_collaborator() );
+	    	MSG.put("id_user",c.getId_user() );
+	    	MSG.put("nif",c.getNif() );
+	    	MSG.put("phone_number",c.getPhone_number() );
+	    	MSG.put("address",c.getAddress() );
+	    	MSG.put("county", c.getCounty());
+	    	MSG.put("district",c.getDistrict() );
+	    	MSG.put("name",c.getName() );
+	    	MSG.put("post_code",c.getPost_code() );
+	    	MSG.put("type",c.getType() );
+	        MSG.put("PATH", "backoffice/CM_index.html");
 	    		
+	    		
+	    		
+	    	}else {
+	    		
+	    		
+	    		System.out.println("Instituicoes");
 	    		
 	    		
 	    		
