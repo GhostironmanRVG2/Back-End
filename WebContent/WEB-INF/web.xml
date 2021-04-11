@@ -788,7 +788,15 @@
   
   
   
-  
+       <servlet>
+  <servlet-name>CandidateGetId</servlet-name>
+  <servlet-class>CandidateGetId</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>CandidateGetId</servlet-name>
+  <url-pattern>/CandidateGetId</url-pattern>
+  </servlet-mapping>
   
   
 </web-app>
