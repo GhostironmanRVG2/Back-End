@@ -2,7 +2,7 @@ package models;
 
 public class ActivityRequestJOIN {
 	int id_request,id_reward,id_activity;
-	String time,date,state,description,type,county,district,address,post_code,photo;
+	String time,date,state,description,type,county,district,address,post_code,photo,name;
 	int id_institution;
 	float latitude,longitude;
 	
@@ -24,9 +24,10 @@ public class ActivityRequestJOIN {
 	}
 	public ActivityRequestJOIN(int id_request, int id_reward, int id_activity, String time, String date, String state,
 			String description, String type, String county, String district, String address, String post_code, float latitude,float longitude, 
-			String photo, int id_institution) {
+			String photo, int id_institution,String name) {
 		
 		super();
+		this.name=name;
 		this.latitude=latitude;
 		this.longitude=longitude;
 		this.id_request = id_request;
@@ -43,6 +44,16 @@ public class ActivityRequestJOIN {
 		this.post_code = post_code;
 		this.photo = photo;
 		this.id_institution = id_institution;
+	}
+	
+	
+	
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
 	}
 	public int getId_request() {
 		return id_request;

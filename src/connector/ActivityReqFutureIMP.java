@@ -19,7 +19,7 @@ public class ActivityReqFutureIMP {
 	String URL="jdbc:mysql://localhost:3306";
 	String USER="BD";
 	String PASSWORD="12341234";
-	String sql="Select DISTINCT  r.id_request , r.id_institution,r.date,TIME_FORMAT(r.time,'%H:%i') AS time, r.type, r.county, r.district, r.address, r.state, r.post_code, r.latitude, r.longitude, r.description, r.photo, a.id_activity, a.id_reward, a.state from (dai.request_activity r inner join dai.activity a on r.id_request=a.id_request) where a.state=\"Ativo\" and ((date=CURDATE() and time>=CURRENT_TIME()) OR date>CURDATE())";
+	String sql="Select DISTINCT r.id_request , r.id_institution,r.date,TIME_FORMAT(r.time,'%H:%i') AS time, r.type, r.county, r.district, r.address, r.state, r.post_code, r.latitude, r.longitude, r.description, r.photo, a.id_activity, a.id_reward, a.state,c.name from(dai.request_activity r join dai.activity a on r.id_request=a.id_request join dai.institution i on i.id_institution=r.id_institution join dai.candidate_institution c on c.id_candidate=i.id_candidate) where a.state='Ativo'and ((date=CURDATE() and time>=CURRENT_TIME()) OR date>CURDATE());";
     ResultSet rs;
     int id;
     List<ActivityRequestJOIN> lista=new ArrayList<ActivityRequestJOIN>();
@@ -51,9 +51,10 @@ public class ActivityReqFutureIMP {
 		            String photo=rs.getString("photo");
 		            float longitude=rs.getFloat("longitude");
 		            float latitude=rs.getFloat("latitude");
+		            String name=rs.getString("name");
           
 		           
-		            lista.add(new ActivityRequestJOIN(id_request,id_reward,id_activity,time, date, state, description, type, county, district, address, post_code,latitude,longitude,photo,id_institution));
+		            lista.add(new ActivityRequestJOIN(id_request,id_reward,id_activity,time, date, state, description, type, county, district, address, post_code,latitude,longitude,photo,id_institution,name));
 		           
 		            
 		           

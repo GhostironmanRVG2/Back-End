@@ -758,6 +758,27 @@
   <servlet-name>InstitutionPost</servlet-name>
   <url-pattern>/InstitutionPost</url-pattern>
   </servlet-mapping>
+ 
+  
+  
+   <servlet>
+  <servlet-name>FactGetByName</servlet-name>
+  <servlet-class>FactGetByName</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>FactGetByName</servlet-name>
+  <url-pattern>/FactGetByName</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  
+  
+  
+  
   
   
 </web-app>

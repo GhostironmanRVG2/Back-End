@@ -53,7 +53,7 @@ public class ActivityRequestJoinGetIMP {
 		            float longitude=rs.getFloat("longitude");
 
 		           
-		            lista.add(new ActivityRequestJOIN(id_request,id_reward,id_activity,time, date, state, description, type, county, district, address, post_code,latitude,longitude,photo,id_institution));
+		            lista.add(new ActivityRequestJOIN(id_request,id_reward,id_activity,time, date, state, description, type, county, district, address, post_code,latitude,longitude,photo,id_institution,null));
 		           
 		            
 		           

@@ -17,9 +17,8 @@ public class Candidate_Institution {
 	public Candidate_Institution() {
 		super();
 	}
-	public Candidate_Institution(int id_candidate, String name, String address, String county, String district, String post_code, int nif, int phone_number,int id_user) {
+	public Candidate_Institution(int id_candidate, String name, String address, String county, String district, String post_code, int nif, int phone_number) {
 		super();
-		this.id_user=id_user;
 		this.name = name;
 		this.address = address;
 		this.county = county;
