@@ -12,12 +12,12 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import connector.ActivityRequestNonActivityGetIMP;
-import models.Request_Activity;
+import models.Request_ActivityCandidateJOIN;
 
 
 public class ActivityRequestNonActivityGet extends HttpServlet {
 
-List<Request_Activity> lista=new ArrayList<Request_Activity>();	
+List<Request_ActivityCandidateJOIN> lista=new ArrayList<Request_ActivityCandidateJOIN>();	
 JSONObject l=new JSONObject();
 protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         
