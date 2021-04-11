@@ -775,6 +775,16 @@
   
   
   
+    
+     <servlet>
+  <servlet-name>CandidateNOTInstitutionGET</servlet-name>
+  <servlet-class>CandidateNOTInstitutionGET</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>CandidateNOTInstitutionGET</servlet-name>
+  <url-pattern>/CandidateNOTInstitutionGET</url-pattern>
+  </servlet-mapping>
   
   
   
