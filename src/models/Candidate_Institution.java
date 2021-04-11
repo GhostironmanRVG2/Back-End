@@ -4,7 +4,7 @@ package models;
 
 public class Candidate_Institution {
 
-	String name,address,county,district,post_code;
+	String name,address,county,district,post_code,email;
 	int nif,phone_number,id_candidate,id_user;
 	
 	
@@ -17,8 +17,9 @@ public class Candidate_Institution {
 	public Candidate_Institution() {
 		super();
 	}
-	public Candidate_Institution(int id_candidate, String name, String address, String county, String district, String post_code, int nif, int phone_number) {
+	public Candidate_Institution(int id_candidate, String name, String address, String county, String district, String post_code, int nif, int phone_number,String email) {
 		super();
+		this.email=email;
 		this.name = name;
 		this.address = address;
 		this.county = county;
@@ -32,6 +33,12 @@ public class Candidate_Institution {
 	
 	
 	
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
 	public int getId_user() {
 		return id_user;
 	}

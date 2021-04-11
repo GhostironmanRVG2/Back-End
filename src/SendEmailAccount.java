@@ -3,7 +3,6 @@ import java.io.PrintWriter;
 import java.util.Properties;
 
 import javax.mail.Message;
-import javax.mail.MessagingException;
 import javax.mail.PasswordAuthentication;
 import javax.mail.Session;
 import javax.mail.Transport;
@@ -17,12 +16,11 @@ import javax.servlet.http.HttpServletResponse;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import connector.ChildGetIMP;
 import connector.PassResetPostIMP;
 import connector.UserGetIdIMP;
 import models.User;
 
-public class SendEmail extends HttpServlet {
+public class SendEmailAccount extends HttpServlet{
 
 	
 	
@@ -30,6 +28,7 @@ public class SendEmail extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
         String email=request.getParameter("email");
+        String passwordSend=request.getParameter("password");
 		final String username = "prochildorganization@gmail.com";
         final String password = "DAIProChild";
 
@@ -46,19 +45,8 @@ public class SendEmail extends HttpServlet {
         
         
         if(!(j.getEmail()==null)) {
-        
-        
-        //RANDOM CODE
-        PasswordUtils PU=new PasswordUtils();
-        
-        String code=PU.getSalt(8);
-        //PUT HIM IN THE BD
        
-        user.setEmail(email);
-        user.setPass_changer(code);
-        
-        PassResetPostIMP pass=new PassResetPostIMP();
-        pass.post(user);
+      
         
         
         Properties prop = new Properties();
@@ -82,8 +70,8 @@ public class SendEmail extends HttpServlet {
                     Message.RecipientType.TO,
                     InternetAddress.parse(email)
             );
-            message.setSubject("code");
-            message.setText(code);
+            message.setSubject("Confirmation");
+            message.setText("Confirmation");
 
             message.setContent(
 
@@ -97,8 +85,19 @@ public class SendEmail extends HttpServlet {
 
 
             		    "<div class='w3-container w3-center w3-animate-top'>"+
-            		        "<h1 style='font-family:Arial, Helvetica, sans-serif'>O seu codigo para redifinir a password é:</h1>"+
-            		        "<p style='font-size: medium;'>"+code+"</p>"+
+            		    
+                            "<h1 style='font-family:Arial, Helvetica, sans-serif'>Parabéns, a sua instituição foi aceite para colaborar com a Kidsland...aqui tem as suas credenciais::</h1>"+
+            		        
+            		        
+            		        "<p style='font-family:Arial, Helvetica, sans-serif'>email:</p>"+
+            		        "<p style='font-size: medium;'>"+email+"</p>"+
+            		        
+                            "<p style='font-family:Arial, Helvetica, sans-serif'>password:</p>"+
+                            "<p style='font-size: medium;'>"+passwordSend+"</p>"+
+            		      
+            		      
+            		      
+            		      
             		      "</div>"+
             		      
             	"</div>"
@@ -132,11 +131,31 @@ public class SendEmail extends HttpServlet {
     }
 	
 		}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
-	
-	
-	
-	
-	
-	
-

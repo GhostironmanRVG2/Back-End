@@ -44,9 +44,10 @@ public class CandidateNOTInstitutionGETIMP {
 		            String post_code=rs.getString("post_code");
 		            int nif=rs.getInt("nif");
 		            int phone_number=rs.getInt("phone_number");
+		            String email=rs.getString("email");
 
 		            
-		            lista.add(new Candidate_Institution(id_candidate,name,address,county,district,post_code,nif,phone_number));
+		            lista.add(new Candidate_Institution(id_candidate,name,address,county,district,post_code,nif,phone_number,email));
 	            }
 		
 		} catch (SQLException | ClassNotFoundException e1) {
