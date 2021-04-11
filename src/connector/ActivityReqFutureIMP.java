@@ -19,13 +19,13 @@ public class ActivityReqFutureIMP {
 	String URL="jdbc:mysql://localhost:3306";
 	String USER="BD";
 	String PASSWORD="12341234";
-	String sql="Select DISTINCT  r.id_request , r.id_institution,r.date,TIME_FORMAT(r.time,'%H:%i') AS time, r.type, r.county, r.district, r.address, r.state, r.post_code, r.latitude, r.longitude, r.description, r.photo, a.id_activity, a.id_reward, a.state, c.name from ( heroku_062c2f3cf2f9e9d.institution i, heroku_062c2f3cf2f9e9d.candidate_institution c, heroku_062c2f3cf2f9e9d.request_activity r inner join heroku_062c2f3cf2f9e9d.activity a on r.id_request=a.id_request) where a.state=\"Ativo\" and ((date=CURDATE() and time>=CURRENT_TIME()) OR date>CURDATE()) and r.id_institution = i.id_institution and i.id_candidate = c.id_candidate;";
+	String sql="Select DISTINCT  r.id_request , r.id_institution,r.date,TIME_FORMAT(r.time,'%H:%i') AS time, r.type, r.county, r.district, r.address, r.state, r.post_code, r.latitude, r.longitude, r.description, r.photo, a.id_activity, a.id_reward, a.state, c.name from ( dai.institution i, dai.candidate_institution c, dai.request_activity r inner join dai.activity a on r.id_request=a.id_request) where a.state=\"Ativo\" and ((date=CURDATE() and time>=CURRENT_TIME()) OR date>CURDATE()) and r.id_institution = i.id_institution and i.id_candidate = c.id_candidate;";
     ResultSet rs;
     int id;
     List<ActivityRequestCandidateJOIN> lista=new ArrayList<ActivityRequestCandidateJOIN>();
 	public List<ActivityRequestCandidateJOIN> ActivityRequestCandidateJOIN() {
 		// Sacar o id
-		//LIGACAO ¡ BASE DE DADOS
+		//LIGACAO √Å BASE DE DADOS
 		try {
 			Class.forName(DRIVER);
 			Connection con=DriverManager.getConnection(URL,USER,PASSWORD);
