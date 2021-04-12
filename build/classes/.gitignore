@@ -7,3 +7,6 @@
 /ActivityPutState.class
 /InstitutionPut.class
 /ActivityRequestStatePut.class
+/ActivityDelete.class
+/ActivityRequestJoinGetByIdActivity.class
+/RequestActivityDelete.class

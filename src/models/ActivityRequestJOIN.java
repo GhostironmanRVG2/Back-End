@@ -1,10 +1,15 @@
 package models;
 
+import java.sql.Date;
+import java.sql.Time;
+
 public class ActivityRequestJOIN {
 	int id_request,id_reward,id_activity;
-	String time,date,state,description,type,county,district,address,post_code,photo,name;
+	String state,description,type,county,district,address,post_code,photo,name;
 	int id_institution;
 	float latitude,longitude;
+	Time time;
+	Date date;
 	
 	
 	
@@ -22,7 +27,7 @@ public class ActivityRequestJOIN {
 	public ActivityRequestJOIN() {
 		super();
 	}
-	public ActivityRequestJOIN(int id_request, int id_reward, int id_activity, String time, String date, String state,
+	public ActivityRequestJOIN(int id_request, int id_reward, int id_activity,Time time, Date date, String state,
 			String description, String type, String county, String district, String address, String post_code, float latitude,float longitude, 
 			String photo, int id_institution,String name) {
 		
@@ -73,16 +78,16 @@ public class ActivityRequestJOIN {
 	public void setId_activity(int id_activity) {
 		this.id_activity = id_activity;
 	}
-	public String getTime() {
+	public Time getTime() {
 		return time;
 	}
-	public void setTime(String time) {
+	public void setTime(Time time) {
 		this.time = time;
 	}
-	public String getDate() {
+	public Date getDate() {
 		return date;
 	}
-	public void setDate(String date) {
+	public void setDate(Date date) {
 		this.date = date;
 	}
 	public String getState() {

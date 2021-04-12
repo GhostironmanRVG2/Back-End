@@ -1,10 +1,12 @@
 package connector;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Time;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,8 +41,8 @@ public class ActivityRequestJoinGetIMP {
 		            int id_reward=rs.getInt("id_reward");
 		            int id_activity=rs.getInt("id_activity");
 		            int id_institution=rs.getInt("id_institution");
-		            String time=rs.getString("time");
-		            String date=rs.getString("date");
+		            Time time=rs.getTime("time");
+		            Date date=rs.getDate("date");
 		            String state=rs.getString("state");
 		            String description=rs.getString("description");
 		            String type=rs.getString("type");
