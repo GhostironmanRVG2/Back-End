@@ -813,4 +813,37 @@
   </servlet-mapping>
   
   
+             <servlet>
+  <servlet-name>RequestActivityDelete</servlet-name>
+  <servlet-class>RequestActivityDelete</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>RequestActivityDelete</servlet-name>
+  <url-pattern>/RequestActivityDelete</url-pattern>
+  </servlet-mapping>
+  
+  
+           <servlet>
+  <servlet-name>ActivityDelete</servlet-name>
+  <servlet-class>ActivityDelete</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ActivityDelete</servlet-name>
+  <url-pattern>/ActivityDelete</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+           <servlet>
+  <servlet-name>ActivityRequestJoinGetByIdActivity</servlet-name>
+  <servlet-class>ActivityRequestJoinGetByIdActivity</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ActivityRequestJoinGetByIdActivity</servlet-name>
+  <url-pattern>/ActivityRequestJoinGetByIdActivity</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
