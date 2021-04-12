@@ -811,12 +811,7 @@
   <servlet-name>SendEmailAccount</servlet-name>
   <url-pattern>/SendEmailAccount</url-pattern>
   </servlet-mapping>
-  
-  
-<<<<<<< HEAD
-  
-  
-  
+     
   
   
            <servlet>
