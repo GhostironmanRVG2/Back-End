@@ -893,4 +893,51 @@
   <url-pattern>/ActivityRequestJoinGetByIdActivity</url-pattern>
   </servlet-mapping>
   
+  
+  
+  
+       <servlet>
+  <servlet-name>ActivityRequestPut</servlet-name>
+  <servlet-class>ActivityRequestPut</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ActivityRequestPut</servlet-name>
+  <url-pattern>/ActivityRequestPut</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  <servlet>
+  <servlet-name>ChildUploadPut</servlet-name>
+  <servlet-class>ChildUploadPut</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ChildUploadPut</servlet-name>
+  <url-pattern>/ChildUploadPut</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 </web-app>

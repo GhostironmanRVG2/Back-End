@@ -10,14 +10,11 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import assets.ChildMSG;
-import assets.RegisterMSG;
 import connector.ChildPutIMP;
-import connector.RegistVerify;
-import connector.RegisterIMP;
+import connector.ChildUploadPutIMP;
 import models.Child;
 
-public class ChildPut extends HttpServlet {
-
+public class ChildUploadPut extends HttpServlet {
 	
 	protected void doPut(HttpServletRequest req,HttpServletResponse resp)
 			throws ServletException,IOException{
@@ -25,27 +22,16 @@ public class ChildPut extends HttpServlet {
 		      //Parametros
 		     String id_child=req.getParameter("id_child");
 		     int id1 = Integer.valueOf(id_child);
-		     String name=req.getParameter("name");
-		     String total_points=req.getParameter("total_points");
-		     int tp=Integer.valueOf(total_points);
-		     String birth_date=req.getParameter("birth_date");
-		     String id_user=req.getParameter("id_user");
-		     int id=Integer.valueOf(id_user);
-		     String phone_number_tutor=req.getParameter("Phone_number_tutor");
-		     int pnt=Integer.valueOf(phone_number_tutor);
+		     String photo=req.getParameter("photo");
 		    
 		
 		       //Object Child
 		       Child c = new Child();
 		       c.setId_child(id1);
-		       c.setName(name);
-		       c.setTotal_points(tp);
-		       c.setBirth_date(birth_date);
-		       c.setId_user(id);
-		       c.setPhone_number_tutor(pnt);
+		       c.setPhoto(photo);
 		       
 				
-				ChildPutIMP CPI = new ChildPutIMP();
+				ChildUploadPutIMP CPI = new ChildUploadPutIMP();
 				int i = CPI.ChildDoPut(c);
 				if(i>0) {
 					doGet(req,resp,200);
@@ -99,27 +85,5 @@ public class ChildPut extends HttpServlet {
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 }

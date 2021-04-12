@@ -9,59 +9,65 @@ import javax.servlet.http.HttpServletResponse;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import assets.ChildMSG;
-import assets.RegisterMSG;
-import connector.ChildPutIMP;
-import connector.RegistVerify;
-import connector.RegisterIMP;
-import models.Child;
+import assets.UserMSG;
+import connector.ActivityRequestPutIMP;
+import connector.UserPutIMP;
+import models.Request_Activity;
+import models.User;
 
-public class ChildPut extends HttpServlet {
+public class ActivityRequestPut extends HttpServlet {
 
-	
 	protected void doPut(HttpServletRequest req,HttpServletResponse resp)
 			throws ServletException,IOException{
 	           			
 		      //Parametros
-		     String id_child=req.getParameter("id_child");
-		     int id1 = Integer.valueOf(id_child);
-		     String name=req.getParameter("name");
-		     String total_points=req.getParameter("total_points");
-		     int tp=Integer.valueOf(total_points);
-		     String birth_date=req.getParameter("birth_date");
-		     String id_user=req.getParameter("id_user");
-		     int id=Integer.valueOf(id_user);
-		     String phone_number_tutor=req.getParameter("Phone_number_tutor");
-		     int pnt=Integer.valueOf(phone_number_tutor);
+		     String description=req.getParameter("description");
+		     String type=req.getParameter("type");
+		     String address=req.getParameter("address");
+		     String district=req.getParameter("district");
+		     String county=req.getParameter("county");
+		     String post_code=req.getParameter("post_code");
+		     String l=req.getParameter("latitude");
+		     float latitude=Float.valueOf(l);
+		     String lo=req.getParameter("longitude");
+		     float longitude=Float.valueOf(lo);
+		     String id=req.getParameter("id_request");
+		     int id_request=Integer.valueOf(id);
 		    
 		
-		       //Object Child
-		       Child c = new Child();
-		       c.setId_child(id1);
-		       c.setName(name);
-		       c.setTotal_points(tp);
-		       c.setBirth_date(birth_date);
-		       c.setId_user(id);
-		       c.setPhone_number_tutor(pnt);
+		       //Object request
+		      Request_Activity R=new Request_Activity();
+		      R.setAddress(address);
+		      R.setCounty(county);
+		      R.setDescription(description);
+		      R.setDistrict(district);
+		      R.setId_request(id_request);
+		      R.setLatitude(latitude);
+		      R.setLongitude(longitude);
+		      R.setPost_code(post_code);
+		      R.setType(type);
 		       
-				
-				ChildPutIMP CPI = new ChildPutIMP();
-				int i = CPI.ChildDoPut(c);
+		      //Connector 
+			  ActivityRequestPutIMP AR=new ActivityRequestPutIMP();  
+			   int i=AR.Put(R);
 				if(i>0) {
 					doGet(req,resp,200);
 					System.out.println("Sucess");
 				}else {doGet(req,resp,400);
 				       System.out.println("Something went wrong");
 
+				
 				}
-
+	
 			}
+	
+	
 	
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response,int cod) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		JSONObject MSG=new JSONObject();
-		ChildMSG M = new ChildMSG();
+		UserMSG M=new UserMSG();
 		if(cod==200) {
 	    try {
 			MSG.put("STATUS", M.getStatusS());
@@ -92,34 +98,5 @@ public class ChildPut extends HttpServlet {
 	    out.flush();   
 		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 }

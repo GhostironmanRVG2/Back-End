@@ -10,3 +10,5 @@
 /ActivityDelete.class
 /ActivityRequestJoinGetByIdActivity.class
 /RequestActivityDelete.class
+/ActivityRequestPut.class
+/ChildUploadPut.class
