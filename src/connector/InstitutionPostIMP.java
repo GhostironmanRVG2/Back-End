@@ -10,7 +10,7 @@ import models.Institution;
 
 public class InstitutionPostIMP {
 	String DRIVER="com.mysql.jdbc.Driver";
-	String URL="jdbc:mysql://localhost:3306";
+	String URL="jdbc:mysql://127.0.0.1:3306";
 	String USER="BD";
 	String PASSWORD="12341234";
 	String sql="Insert into dai.institution (id_candidate,id_user) VALUE (?,?)";

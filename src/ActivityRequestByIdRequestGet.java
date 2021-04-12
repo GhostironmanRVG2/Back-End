@@ -12,10 +12,11 @@ import org.json.JSONObject;
 import connector.ActivityRequestByIdRequestGetIMP;
 import connector.TotalPointsChildGetIMP;
 import models.Request_Activity;
+import models.Request_ActivityJOINinstitution;
 
 public class ActivityRequestByIdRequestGet extends HttpServlet {
 Request_Activity R=new Request_Activity();
-Request_Activity result=new Request_Activity();
+Request_ActivityJOINinstitution result;
 JSONObject l=new JSONObject();
 	
 	
@@ -47,6 +48,7 @@ JSONObject l=new JSONObject();
 				l.put("state", result.getState());
 				l.put("time",result.getTime() );
 				l.put("type",result.getType() );
+				l.put("name", result.getName());
 			} catch (JSONException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();

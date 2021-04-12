@@ -21,10 +21,10 @@ public class InstitutionPost extends HttpServlet {
 	JSONObject MSG=new JSONObject();
 	protected void doPost(HttpServletRequest req,HttpServletResponse resp)
 			throws ServletException,IOException{
-	        String id_c=req.getParameter("id_candidate");
-	        int id_candidate=Integer.valueOf(id_c);
-		    String id_u=req.getParameter("id_user");
-		    int id_user=Integer.valueOf("id_user");
+	        String id1=req.getParameter("id_candidate");
+	        int id_candidate=Integer.valueOf(id1);
+		    String id2=req.getParameter("id_user");
+		    int id_user=Integer.valueOf(id2);
 		    
 		    
 		    Institution I=new Institution();

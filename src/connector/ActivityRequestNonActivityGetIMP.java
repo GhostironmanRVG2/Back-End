@@ -19,7 +19,7 @@ public class ActivityRequestNonActivityGetIMP {
 	String URL="jdbc:mysql://localhost:3306";
 	String USER="BD";
 	String PASSWORD="12341234";
-	String sql="Select request_activity.id_request, request_activity.id_institution, request_activity.state, request_activity.description, request_activity.type, request_activity.county, request_activity.district, request_activity.address, request_activity.post_code, request_activity.photo, request_activity.date, request_activity.time, request_activity.latitude, request_activity.longitude, candidate_institution.name  from dai.request_activity, dai.institution, dai.candidate_institution where id_request not in (Select id_request from dai.activity) and request_activity.id_institution = institution.id_institution and institution.id_candidate = candidate_institution.id_candidate;";
+	String sql="Select request_activity.id_request, request_activity.id_institution, request_activity.state, request_activity.description, request_activity.type, request_activity.county, request_activity.district, request_activity.address, request_activity.post_code, request_activity.photo, request_activity.date, request_activity.time, request_activity.latitude, request_activity.longitude, candidate_institution.name  from dai.request_activity, dai.institution, dai.candidate_institution where id_request not in (Select id_request from dai.activity) and request_activity.id_institution = institution.id_institution and institution.id_candidate = candidate_institution.id_candidate and (request_activity.state='Aguardar' or request_activity.state='Arquivada');";
     ResultSet rs;
     List<Request_ActivityCandidateJOIN> lista=new ArrayList<Request_ActivityCandidateJOIN>();
 	public List<Request_ActivityCandidateJOIN> get() {

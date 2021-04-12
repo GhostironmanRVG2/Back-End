@@ -813,4 +813,80 @@
   </servlet-mapping>
   
   
+  
+  
+  
+  
+  
+           <servlet>
+  <servlet-name>ActivityPutState</servlet-name>
+  <servlet-class>ActivityPutState</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ActivityPutState</servlet-name>
+  <url-pattern>/ActivityPutState</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  
+           <servlet>
+  <servlet-name>InstitutionPut</servlet-name>
+  <servlet-class>InstitutionPut</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>InstitutionPut</servlet-name>
+  <url-pattern>/InstitutionPut</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+  <servlet>
+  <servlet-name>ActivityRequestStatePut</servlet-name>
+  <servlet-class>ActivityRequestStatePut</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ActivityRequestStatePut</servlet-name>
+  <url-pattern>/ActivityRequestStatePut</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 </web-app>

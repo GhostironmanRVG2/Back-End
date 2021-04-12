@@ -32,9 +32,8 @@ public class CandidateGetIdIMP {
 						Connection con=DriverManager.getConnection(URL,USER,PASSWORD);
 						PreparedStatement ps=con.prepareStatement(sql);
 						ps.setInt(1,id_candidate);
-						ps.setString(2, "closed");
 				            rs=ps.executeQuery();
-				           while( rs.next()) {
+				           rs.next();
 			            	int nif =rs.getInt("nif");
 			            	String name=rs.getString("name");
 			            	String address=rs.getString("address");
@@ -46,7 +45,6 @@ public class CandidateGetIdIMP {
 				          
 				            lista.add(new Candidate_Institution(id_candidate, name, address, county, district, post_code, nif, phone_number, email));
 				  
-				           }
 						
 					} catch (SQLException | ClassNotFoundException e1) {
 						// TODO Auto-generated catch block

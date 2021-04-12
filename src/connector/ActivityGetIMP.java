@@ -38,8 +38,9 @@ public class ActivityGetIMP {
 		            int id_request=rs.getInt("id_request");
 		            int id_reward=rs.getInt("id_reward");
 		            int id_activity=rs.getInt("id_activity");
+		            String state=rs.getString("state");
 		            
-		            lista.add(new Activity(id_activity,id_request,id_reward));
+		            lista.add(new Activity(id_activity,id_request,id_reward,state));
 		            
 	            }
 		            

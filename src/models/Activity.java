@@ -2,6 +2,7 @@ package models;
 
 public class Activity {
 	int id_request,id_reward,id_activity;
+	String state;
 	
 	
 	
@@ -15,14 +16,28 @@ public class Activity {
 
 
 
-	public Activity( int id_activity,int id_request, int id_reward) {
+	public Activity( int id_activity,int id_request, int id_reward,String state) {
 		super();
+		this.state=state;
 		this.id_activity=id_activity;
 		this.id_request = id_request;
 		this.id_reward = id_reward;
 	}
 	
 	
+	
+
+	public String getState() {
+		return state;
+	}
+
+
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+
 
 	public int getId_activity() {
 		return id_activity;

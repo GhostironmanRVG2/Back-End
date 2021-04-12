@@ -74,33 +74,9 @@ public class SendEmailAccount extends HttpServlet{
             message.setText("Confirmation");
 
             message.setContent(
-
-            		"<div class='w3-container' style='background-color:#46D0D9; border: 20%; width: 50%; height: 40%;text-align: center;'>"+
-
-            		    "<h1 style='color: aliceblue;border: 10%;border: black;border-style: double;'>KIDSLAND</h1>"+
-
-            		    "<div>"+
-            		    "<img src='http://188.82.156.135:8080/Back-end/IMAGES/image%201.png'>"+
-            		"</div>"+
-
-
-            		    "<div class='w3-container w3-center w3-animate-top'>"+
-            		    
-                            "<h1 style='font-family:Arial, Helvetica, sans-serif'>Parabéns, a sua instituição foi aceite para colaborar com a Kidsland...aqui tem as suas credenciais::</h1>"+
-            		        
-            		        
-            		        "<p style='font-family:Arial, Helvetica, sans-serif'>email:</p>"+
-            		        "<p style='font-size: medium;'>"+email+"</p>"+
-            		        
-                            "<p style='font-family:Arial, Helvetica, sans-serif'>password:</p>"+
-                            "<p style='font-size: medium;'>"+passwordSend+"</p>"+
-            		      
-            		      
-            		      
-            		      
-            		      "</div>"+
-            		      
-            	"</div>"
+            		"<div class=''><div class='aHl'></div><div id=':1b0' tabindex='-1'></div><div id=':1bb' class='ii gt'><div id=':1bc' class='a3s aiL '>Cara Instituição, <br><br>Informamos que a sua candidatura foi aceite com sucesso.  <br><br> <p style='font-weight: bold; font-size: 12px;'>Credenciais de Autentição:</p> <p style='font-size: 10px;'>Utilizador: "+email+"</p> <p style='font-size: 10px;'>Password: "+passwordSend+"</p> <br>Por questões de segurança, deverá alterar posteriormente a sua palavra-passe.<br><br>Agradecemos a sua preferência,<br><br><img src='https://i.ibb.co/gM7pTjQ/logo.png' alt='logo' height='102' width='150' class='CToWUd'><br><span class='il'>KidsLand</span> - ProChild"+
+            	    "</div><div class='yj6qo'></div></div><div id=':1aw' class='ii gt' style='display:none'><div id=':1av' class='a3s aiL '></div></div><div class='hi'></div></div>"
+            		
             		
             	         , "text/html; charset=utf-8");
             
