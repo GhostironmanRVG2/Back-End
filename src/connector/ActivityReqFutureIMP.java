@@ -19,7 +19,7 @@ public class ActivityReqFutureIMP {
 	String URL="jdbc:mysql://localhost:3306";
 	String USER="BD";
 	String PASSWORD="12341234";
-	String sql="Select DISTINCT  r.id_request , r.id_institution,r.date,TIME_FORMAT(r.time,'%H:%i') AS time, r.type, r.county, r.district, r.address, r.state, r.post_code, r.latitude, r.longitude, r.description, r.photo, a.id_activity, a.id_reward, a.state, c.name from ( dai.institution i, dai.candidate_institution c, dai.request_activity r inner join dai.activity a on r.id_request=a.id_request) where a.state='Ativo' and ((date=CURDATE() and time>=CURRENT_TIME()) OR date>CURDATE()) and r.id_institution = i.id_institution and i.id_candidate = c.id_candidate;";
+	String sql="Select DISTINCT  r.id_request , r.id_institution,r.date,TIME_FORMAT(r.time,'%H:%i') AS time, r.type, r.county, r.district, r.address, r.state as state_request, r.post_code, r.latitude, r.longitude, r.description, r.photo, a.id_activity, a.id_reward, a.state, c.name from ( dai.institution i, dai.candidate_institution c, dai.request_activity r inner join dai.activity a on r.id_request=a.id_request) where a.state='Ativo' and ((date=CURDATE() and time>=CURRENT_TIME()) OR date>CURDATE()) and r.id_institution = i.id_institution and i.id_candidate = c.id_candidate;";
     ResultSet rs;
     int id;
     List<ActivityRequestCandidateJOIN> lista=new ArrayList<ActivityRequestCandidateJOIN>();
@@ -52,9 +52,10 @@ public class ActivityReqFutureIMP {
 		            float longitude=rs.getFloat("longitude");
 		            float latitude=rs.getFloat("latitude");
 		            String name=rs.getString("name");
+			    String state_request=rs.getString("state_request");
           
 		           
-		            lista.add(new ActivityRequestCandidateJOIN(id_request,id_reward,id_activity,time, date, state, description, type, county, district, address, post_code,latitude,longitude,photo,id_institution,name));
+		            lista.add(new ActivityRequestCandidateJOIN(id_request,id_reward,id_activity,time, date, state, description, type, county, district, address, post_code,latitude,longitude,photo,id_institution,name,state_request));
 		           
 		            
 		           
