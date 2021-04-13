@@ -3,29 +3,17 @@ package models;
 
 public class ActivityRequestCandidateJOIN {
 	int id_request,id_reward,id_activity;
-	String time,date,state,description,type,county,district,address,post_code,photo, name;
+	String time,date,state,description,type,county,district,address,post_code,photo, name, state_request;
 	int id_institution;
 	float latitude,longitude;
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	public ActivityRequestCandidateJOIN() {
 		super();
 	}
 	public ActivityRequestCandidateJOIN(int id_request, int id_reward, int id_activity, String time, String date, String state,
 			String description, String type, String county, String district, String address, String post_code, float latitude,float longitude, 
-			String photo, int id_institution, String name) {
+			String photo, int id_institution, String name, String state_request) {
 		
 		super();
 		this.latitude=latitude;
@@ -45,6 +33,7 @@ public class ActivityRequestCandidateJOIN {
 		this.photo = photo;
 		this.id_institution = id_institution;
 		this.name = name;
+		this.state_request = state_request;
 	}
 	public int getId_request() {
 		return id_request;
@@ -148,14 +137,12 @@ public class ActivityRequestCandidateJOIN {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
+	public String getState_request() {
+		return state_request;
+	}
+	public void setState_request(String state_request) {
+		this.state_request = state_request;
+	}
 	
 
 }
