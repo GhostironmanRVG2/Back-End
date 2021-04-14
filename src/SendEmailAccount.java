@@ -71,7 +71,7 @@ public class SendEmailAccount extends HttpServlet{
                     InternetAddress.parse(email)
             );
             message.setSubject("Confirmation");
-            message.setText("Confirmation");
+            message.setText("Candidatura-Kidsland");
 
             message.setContent(
             		"<div class=''><div class='aHl'></div><div id=':1b0' tabindex='-1'></div><div id=':1bb' class='ii gt'><div id=':1bc' class='a3s aiL '>Cara Instituição, <br><br>Informamos que a sua candidatura foi aceite com sucesso.  <br><br> <p style='font-weight: bold; font-size: 12px;'>Credenciais de Autentição:</p> <p style='font-size: 10px;'>Utilizador: "+email+"</p> <p style='font-size: 10px;'>Password: "+passwordSend+"</p> <br>Por questões de segurança, deverá alterar posteriormente a sua palavra-passe.<br><br>Agradecemos a sua preferência,<br><br><img src='https://i.ibb.co/gM7pTjQ/logo.png' alt='logo' height='102' width='150' class='CToWUd'><br><span class='il'>KidsLand</span> - ProChild"+

@@ -82,26 +82,15 @@ public class SendEmail extends HttpServlet {
                     Message.RecipientType.TO,
                     InternetAddress.parse(email)
             );
-            message.setSubject("code");
+            message.setSubject("Código de verificação-Kidsland");
             message.setText(code);
 
             message.setContent(
-
-            		"<div class='w3-container' style='background-color:#46D0D9; border: 20%; width: 50%; height: 40%;text-align: center;'>"+
-
-            		    "<h1 style='color: aliceblue;border: 10%;border: black;border-style: double;'>KIDSLAND</h1>"+
-
-            		    "<div>"+
-            		    "<img src='http://188.82.156.135:8080/Back-end/IMAGES/image%201.png'>"+
-            		"</div>"+
-
-
-            		    "<div class='w3-container w3-center w3-animate-top'>"+
-            		        "<h1 style='font-family:Arial, Helvetica, sans-serif'>O seu codigo para redifinir a password é:</h1>"+
-            		        "<p style='font-size: medium;'>"+code+"</p>"+
-            		      "</div>"+
-            		      
-            	"</div>"
+            		"<div class=''><div class='aHl'></div><div id=':1b0' tabindex='-1'></div><div id=':1bb' class='ii gt'><div id=':1bc' class='a3s aiL '>Caro Utilizador, <br><br>O seu pedido de redefinição de palavra-passe foi executado com sucesso. <br>Insira o código abaixo na sua aplicação.  <br><br><p style='font-weight: bold;'>Código: </p> <p >"+code+"</p><br><br>Agradecemos a sua preferência,<br><br><img src='https://i.ibb.co/gM7pTjQ/logo.png' alt='logo' height='102' width='150' class='CToWUd'><br><span class='il'>KidsLand</span> - ProChild"+
+                    "<br>"+
+                    "<br>"+
+                    "<p style='font-weight: normal; font-size: 12px;'>Caso não tenha solicitado este email, pedimos que ignore o email presente.  </p>"+
+                "</div><div class='yj6qo'></div></div><div id=':1aw' class='ii gt' style='display:none'><div id=':1av' class='a3s aiL '></div></div><div class='hi'></div></div>"
             		
             	         , "text/html; charset=utf-8");
             

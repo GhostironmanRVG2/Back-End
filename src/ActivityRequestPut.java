@@ -1,5 +1,7 @@
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Date;
+import java.sql.Time;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -33,6 +35,11 @@ public class ActivityRequestPut extends HttpServlet {
 		     float longitude=Float.valueOf(lo);
 		     String id=req.getParameter("id_request");
 		     int id_request=Integer.valueOf(id);
+		     String d=req.getParameter("date");
+		     Date date=Date.valueOf(d);
+		     String t=req.getParameter("time");
+		     Time time=Time.valueOf(t);
+		     String state=req.getParameter("state");
 		    
 		
 		       //Object request
@@ -46,6 +53,9 @@ public class ActivityRequestPut extends HttpServlet {
 		      R.setLongitude(longitude);
 		      R.setPost_code(post_code);
 		      R.setType(type);
+		      R.setDate(date);
+		      R.setTime(time);
+		      R.setState(state);
 		       
 		      //Connector 
 			  ActivityRequestPutIMP AR=new ActivityRequestPutIMP();  

@@ -1,9 +1,11 @@
 package connector;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.sql.Time;
 
 import models.Request_Activity;
 
@@ -12,7 +14,7 @@ public class ActivityRequestPutIMP {
 	String URL="jdbc:mysql://localhost:3306";
 	String USER="BD";
 	String PASSWORD="12341234";
-String sql="Update dai.request_activity set address=?,county=?,description=?,district=?,latitude=?,longitude=?,post_code=?,type=? where id_request=?";
+String sql="Update dai.request_activity set address=?,county=?,description=?,district=?,latitude=?,longitude=?,post_code=?,type=?,date=?,time=?,state=? where id_request=?";
 int i;
 	public int Put(Request_Activity r) {
 		String address =r.getAddress();
@@ -24,6 +26,9 @@ int i;
 		Float longitude=r.getLongitude();
 		String post_code=r.getPost_code();
 		String type=r.getType();
+		Date date=r.getDate();
+		Time time=r.getTime();
+		String state=r.getState();
 		
 		
 		
@@ -39,7 +44,10 @@ int i;
 			ps.setFloat(6, longitude);
 			ps.setString(7,post_code);
 			ps.setString(8, type);
-			ps.setInt(9, id_request);
+			ps.setDate(9,date);
+			ps.setTime(10, time);
+			ps.setString(11, state);
+			ps.setInt(12, id_request);
 			
 			
 			
