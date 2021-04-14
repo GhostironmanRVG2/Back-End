@@ -16,7 +16,7 @@ public class ActivityRequestJoinGetByIdActivityIMP{
 	String URL="jdbc:mysql://localhost:3306";
 	String USER="BD";
 	String PASSWORD="12341234";
-	String sql="Select * from dai.request_activity r, dai.activity a where a.id_activity=? and r.id_request = r.id_request";
+	String sql="Select * from dai.request_activity r, dai.activity a where a.id_activity=? and r.id_request = a.id_request";
 	ResultSet rs;
 	ActivityRequestJOIN result=new ActivityRequestJOIN();
 	public ActivityRequestJOIN get(ActivityRequestJOIN r) {
