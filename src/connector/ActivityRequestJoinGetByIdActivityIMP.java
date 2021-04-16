@@ -1,4 +1,3 @@
-
 package connector;
 
 import java.sql.Connection;
@@ -8,31 +7,40 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Time;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.Flow.Subscription;
 
 import models.ActivityRequestJOIN;
 
+
 public class ActivityRequestJoinGetByIdActivityIMP{
 	String DRIVER="com.mysql.jdbc.Driver";
-	String URL="jdbc:mysql://localhost:3306";
-	String USER="BD";
-	String PASSWORD="12341234";
-	String sql="Select * from dai.request_activity r, dai.activity a where a.id_activity=? and r.id_request = a.id_request";
+	String URL="jdbc:mysql://188.82.156.135:3306";
+	String USER="monkey";
+	String PASSWORD="monkey";
+	String sql="Select a.id_request, a.id_reward, a.id_activity, r.time, r.date, a.state, r.description, r.type, r.county, r.district, r.address, r.post_code, r.latitude, r.longitude, r.photo, r.id_institution, c.name, r.state as state_request from dai.request_activity r, dai.activity a, dai.institution i, dai.candidate_institution c where a.id_activity=? and r.id_request = a.id_request and r.id_institution = i.id_institution and i.id_candidate=c.id_candidate";
 	ResultSet rs;
-	ActivityRequestJOIN result=new ActivityRequestJOIN();
-	public ActivityRequestJOIN get(ActivityRequestJOIN r) {
+	
+	List<ActivityRequestJOIN> lista=new ArrayList<ActivityRequestJOIN>();
+	
+	
+	public List<ActivityRequestJOIN> Get(ActivityRequestJOIN subs) {
+		int id_activity=subs.getId_activity();
+		// TODO Auto-generated method stub
 		
-		int id=r.getId_request();// TODO Auto-generated method stub
 		try {
 			Class.forName(DRIVER);
 			Connection con=DriverManager.getConnection(URL,USER,PASSWORD);
 			PreparedStatement ps=con.prepareStatement(sql);
-			ps.setInt(1,id);
+			ps.setInt(1,id_activity);
 	            rs=ps.executeQuery();
-	            rs.next();
+	            
+	            
+	            while(rs.next()) {
 	            int id_request=rs.getInt("id_request");
             	int id_institution =rs.getInt("id_institution");
             	int id_reward=rs.getInt("id_reward");
-            	int id_activity=rs.getInt("id_activity");
             	String state=rs.getString("state");
             	String description=rs.getString("description");
             	String name=rs.getString("name");
@@ -46,29 +54,12 @@ public class ActivityRequestJoinGetByIdActivityIMP{
             	Time time=rs.getTime("time");
             	float latitude=rs.getFloat("latitude");
             	float longitude=rs.getFloat("longitude");
+            	String state_request=rs.getString("state_request");
         		
             	
-            	result.setAddress(address);
-            	result.setCounty(county);
-            	result.setDate(date);
-            	result.setDescription(description);
-            	result.setDistrict(district);
-            	result.setId_institution(id_institution);
-            	result.setId_request(id_request);
-            	result.setLatitude(latitude);
-            	result.setLongitude(longitude);
-            	result.setPhoto(photo);
-            	result.setPost_code(post_code);
-            	result.setState(state);
-            	result.setTime(time);
-            	result.setType(type);
-            	result.setName(name);
-            	result.setId_reward(id_reward);
-            	result.setId_activity(id_activity);
+            	lista.add(new ActivityRequestJOIN(id_request, id_reward, id_activity, time, date, state, description, type, county, district, address, post_code, latitude, longitude, photo, id_institution, name, state_request));
 
-            	
-                
-	            
+	            }
 			
 			
 		} catch (SQLException | ClassNotFoundException e1) {
@@ -76,7 +67,7 @@ public class ActivityRequestJoinGetByIdActivityIMP{
 			e1.printStackTrace();
 			
 		}
-		return result;
+		return lista;
 	}
 		
 	
