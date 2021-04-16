@@ -16,9 +16,9 @@ import models.ActivityRequestJOIN;
 
 public class ActivityRequestJoinGetByIdActivityIMP{
 	String DRIVER="com.mysql.jdbc.Driver";
-	String URL="jdbc:mysql://188.82.156.135:3306";
-	String USER="monkey";
-	String PASSWORD="monkey";
+	String URL="jdbc:mysql://localhost:3306";
+	String USER="BD";
+	String PASSWORD="12341234";
 	String sql="Select a.id_request, a.id_reward, a.id_activity, r.time, r.date, a.state, r.description, r.type, r.county, r.district, r.address, r.post_code, r.latitude, r.longitude, r.photo, r.id_institution, c.name, r.state as state_request from dai.request_activity r, dai.activity a, dai.institution i, dai.candidate_institution c where a.id_activity=? and r.id_request = a.id_request and r.id_institution = i.id_institution and i.id_candidate=c.id_candidate";
 	ResultSet rs;
 	
