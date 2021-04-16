@@ -5,31 +5,20 @@ import java.sql.Time;
 
 public class ActivityRequestJOIN {
 	int id_request,id_reward,id_activity;
-	String state,description,type,county,district,address,post_code,photo,name;
+	String state,description,type,county,district,address,post_code,photo,name, state_request;
 	int id_institution;
 	float latitude,longitude;
 	Time time;
 	Date date;
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 	public ActivityRequestJOIN() {
 		super();
 	}
 	public ActivityRequestJOIN(int id_request, int id_reward, int id_activity,Time time, Date date, String state,
 			String description, String type, String county, String district, String address, String post_code, float latitude,float longitude, 
-			String photo, int id_institution,String name) {
+			String photo, int id_institution,String name, String state_request) {
 		
 		super();
 		this.name=name;
@@ -49,6 +38,7 @@ public class ActivityRequestJOIN {
 		this.post_code = post_code;
 		this.photo = photo;
 		this.id_institution = id_institution;
+		this.state_request = state_request;
 	}
 	
 	
@@ -156,14 +146,12 @@ public class ActivityRequestJOIN {
 	public void setLongitude(float longitude) {
 		this.longitude = longitude;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
+	public String getState_request() {
+		return state_request;
+	}
+	public void setState_request(String state_request) {
+		this.state_request = state_request;
+	}
 	
 
 }
