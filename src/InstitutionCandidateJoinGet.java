@@ -27,20 +27,27 @@ public class InstitutionCandidateJoinGet extends HttpServlet {
 		InstitutionCandidateJoinGetIMP RGAI=new InstitutionCandidateJoinGetIMP();
 	        o=RGAI.ActivityCandidateJoinGETAll();
 	        
+		
+		PrintWriter out = response.getWriter();
+	        response.setContentType("application/json");
+		response.setCharacterEncoding("UTF-8");
+ 
 	        
+		
 	        try {
-				l.put("", o);
+				l.put("MSG", o);
 			} catch (JSONException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
 			
 			
-			 PrintWriter out = response.getWriter();
-			    response.setContentType("application/json");
-			    response.setCharacterEncoding("UTF-8");
-			    out.print(l);
-			    out.flush();   
+ 		try { 
+				out.print(l.get("MSG"));
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 	        
 	
 			
