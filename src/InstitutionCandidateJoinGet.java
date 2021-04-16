@@ -29,7 +29,7 @@ public class InstitutionCandidateJoinGet extends HttpServlet {
 	        
 	        
 	        try {
-				l.put("MSG", o);
+				l.put("", o);
 			} catch (JSONException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
