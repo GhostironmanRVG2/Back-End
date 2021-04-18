@@ -15,7 +15,7 @@ public class CollabGetByIDUimp {
 	String URL="jdbc:mysql://localhost:3306";
 	String USER="BD";
 	String PASSWORD="12341234";
-	String sql="Select * from dai.collaborator where id_user=?";
+	String sql="Select * from dai.candidate_institution where id_user=?";
 	ResultSet rs;
 	Collaborator c=new Collaborator(1,1,"lol",1,"lol","lol","lol","lol","lol",2);
 	public Collaborator Get(User user) {

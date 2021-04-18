@@ -52,7 +52,7 @@ try {
 	// TODO Auto-generated catch block
 	e.printStackTrace();
 }
-	}else {
+	}else if(session.getAttribute("header").equals("Collaborator")) {
 		
 		Object id_collaborator=session.getAttribute("id_collaborator");
 		Object id_user=session.getAttribute("id_user");
@@ -86,6 +86,7 @@ try {
 		}
 		
 		
+	
 		
 		
 		
@@ -94,6 +95,40 @@ try {
 		
 		
 		
+		
+		
+	}else {
+		
+		
+		
+			Object id_user=session.getAttribute("id_user");
+		Object address=session.getAttribute("address");
+		Object birth_date=session.getAttribute("birth_date");
+		Object county=session.getAttribute("county");
+		Object district=session.getAttribute("district" );
+		Object name=session.getAttribute("name" );
+		Object phone_number=session.getAttribute("phone_number");
+		Object post_code=session.getAttribute("post_code");	
+		Object nif=session.getAttribute("nif");
+		Object id_candidate=session.getAttribute("id_candidate");
+		
+		try {
+			msg.put("id_candidate", id_candidate);
+			msg.put("id_user", id_user);
+	    msg.put("address", address);
+	    msg.put("birth_date", birth_date);
+	    msg.put("county",county);
+	    msg.put("district", district);
+	    msg.put("name", name);
+	    msg.put("phone_number", phone_number);
+	    msg.put("post_code", post_code);
+	    msg.put("nif", nif);
+	
+			
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		
 		

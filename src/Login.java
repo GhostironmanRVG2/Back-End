@@ -3,6 +3,7 @@ import java.io.PrintWriter;
 
 import connector.ChildGetByIdIMP;
 import connector.CollabGetByIDUimp;
+import connector.InstitutionGetByIdIMP;
 import connector.LoginIMP;
 import assets.LoginMSG;
 
@@ -19,6 +20,7 @@ import assets.RegisterMSG;
 import connector.RegisterIMP;
 import connector.TutorGetByIdUserIMP;
 import connector.UserGetIdIMP;
+import models.Candidate_Institution;
 import models.Child;
 import models.Collaborator;
 import models.Tutor;
@@ -78,7 +80,7 @@ public class Login extends HttpServlet {
 				            UserGetIdIMP lol=new UserGetIdIMP();
 				            User l =rev.getByID(user);
 			            	
-			            	//CRIAR AS MERDAS COLLAB
+			            	//CRIAR COLLAB
 			            	
 			            	CollabGetByIDUimp id_col=new CollabGetByIDUimp();
 			                Collaborator ñ=id_col.Get(k);
@@ -102,8 +104,25 @@ public class Login extends HttpServlet {
 			            	
 			            	
 			            	
-			            }else {
+			            }else{
 			            	
+			            	//SACAR LOGIN TYPE
+				            UserGetIdIMP l2=new UserGetIdIMP();
+				            User l=rev.getByID(user);
+			            	//CRIAR INSTI
+				            InstitutionGetByIdIMP insti=new InstitutionGetByIdIMP();
+				            Candidate_Institution ñ=insti.get(k);
+				            session.setAttribute("header","Institution");
+					        session.setAttribute("address",ñ.getAddress());
+					        session.setAttribute("county", ñ.getCounty());
+					        session.setAttribute("district", ñ.getDistrict());
+					        session.setAttribute("id_user", ñ.getId_user());
+					        session.setAttribute("name", ñ.getName());
+					        session.setAttribute("nif", ñ.getNif());
+					        session.setAttribute("phone_number", ñ.getPhone_number());
+					        session.setAttribute("post_code",ñ.getPost_code());
+					        session.setAttribute("id_candidate", ñ.getId_candidate());
+					        doGet(req,resp,200,l,ñ);
 			            	
 			            	System.out.println("Instituicao");
 			            	
@@ -160,6 +179,7 @@ public class Login extends HttpServlet {
 		Child i=new Child();
 		User h=new User();
 		Collaborator c=new Collaborator();
+		Candidate_Institution in=new Candidate_Institution();
 		if(cod==200) {
 	    try {
 	    	if(login.getClass().equals(i.getClass())) {
@@ -210,9 +230,25 @@ public class Login extends HttpServlet {
 	    		
 	    		
 	    	}else {
-	    		
-	    		
-	    		System.out.println("Instituicoes");
+	    		MSG.put("STATUS", M.getStatusS());
+		    	MSG.put("MSG",M.getStatusMsgS() );
+		    	//dados user
+		    	h=(User)user;
+		    	MSG.put("id_user",h.getID() );
+				MSG.put("email",h.getEmail() );
+				MSG.put("status_user",h.getStatus());
+				//dados 
+				 in=(Candidate_Institution)login;
+				 MSG.put("PATH", "backoffice/CM_index.html");
+				 MSG.put("id_candidate",in.getId_candidate() );
+				 MSG.put("nif",in.getNif() );
+				 MSG.put("phone_number",in.getPhone_number() );
+				 MSG.put("address",in.getAddress() );
+				 MSG.put("county", in.getCounty());
+				 MSG.put("district", in.getDistrict());
+				 MSG.put("name",in.getName() );
+				 MSG.put("post_code",in.getPost_code() );
+				 
 	    		
 	    		
 	    		
