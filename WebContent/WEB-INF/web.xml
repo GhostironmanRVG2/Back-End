@@ -922,12 +922,81 @@
   
   
   
+    
+  <servlet>
+  <servlet-name>AndroidIdPut</servlet-name>
+  <servlet-class>AndroidIdPut</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>AndroidIdPut</servlet-name>
+  <url-pattern>/AndroidIdPut</url-pattern>
+  </servlet-mapping>
   
   
   
   
   
+  <servlet>
+  <servlet-name>AndroidIdVerifyGet</servlet-name>
+  <servlet-class>AndroidIdVerifyGet</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>AndroidIdVerifyGet</servlet-name>
+  <url-pattern>/AndroidIdVerifyGet</url-pattern>
+  </servlet-mapping>
   
+  
+  
+   <servlet>
+  <servlet-name>BiometricGet</servlet-name>
+  <servlet-class>BiometricGet</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>BiometricGet</servlet-name>
+  <url-pattern>/BiometricGet</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+     <servlet>
+  <servlet-name>InstitutionGetNonActivityById</servlet-name>
+  <servlet-class>InstitutionGetNonActivityById</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>InstitutionGetNonActivityById</servlet-name>
+  <url-pattern>/InstitutionGetNonActivityById</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+     <servlet>
+  <servlet-name>Request_ActivityPost</servlet-name>
+  <servlet-class>Request_ActivityPost</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>Request_ActivityPost</servlet-name>
+  <url-pattern>/Request_ActivityPost</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+    <servlet>
+  <servlet-name>Request_ActivityPorIdNotActivitiesGET</servlet-name>
+  <servlet-class>Request_ActivityPorIdNotActivitiesGET</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>Request_ActivityPorIdNotActivitiesGET</servlet-name>
+  <url-pattern>/Request_ActivityPorIdNotActivitiesGET</url-pattern>
+  </servlet-mapping>
   
   
   

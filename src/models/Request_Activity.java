@@ -5,8 +5,8 @@ import java.sql.Time;
 
 public class Request_Activity {
 
-	String state,description,type,county,district,address,post_code,photo;
-	int id_institution,id_request;
+	String state,description,type,county,district,address,post_code,photo,activity_state;
+	int id_institution,id_request,id_activity,id_reward;
 	float latitude,longitude;
 	Time time;
 	Date date;
@@ -40,6 +40,32 @@ public class Request_Activity {
 	}
 	
 	
+	
+	
+	
+	
+	public Request_Activity(Time time, Date date, String state, String description, String type, String county,
+			String district, String address,float latitude,float longitude ,String post_code, String photo, int id_institution, int id_request,String activity_state,int id_activity,int id_reward) {
+		super();
+		this.latitude=latitude;
+		this.longitude=longitude;
+		this.time = time;
+		this.date = date;
+		this.state = state;
+		this.description = description;
+		this.type = type;
+		this.county = county;
+		this.district = district;
+		this.address = address;
+		this.post_code = post_code;
+		this.photo = photo;
+		this.id_institution = id_institution;
+		this.id_request = id_request;
+		this.activity_state=activity_state;
+		this.id_activity=id_activity;
+		this.id_reward=id_reward;
+		
+	}
 	
 	
 	

@@ -1,7 +1,7 @@
 package models;
 
 public class User {
- String email,password,salt,login_type,status,pass_changer;
+ String email,password,salt,login_type,status,pass_changer,Android_ID;
  int id_user;
  
  
@@ -13,6 +13,37 @@ public class User {
  public User() {
 	super();
 }
+
+ 
+public String getLogin_type() {
+	return login_type;
+}
+
+
+public void setLogin_type(String login_type) {
+	this.login_type = login_type;
+}
+
+
+public String getAndroid_ID() {
+	return Android_ID;
+}
+
+
+public void setAndroid_ID(String android_ID) {
+	Android_ID = android_ID;
+}
+
+
+public int getId_user() {
+	return id_user;
+}
+
+
+public void setId_user(int id_user) {
+	this.id_user = id_user;
+}
+
 
 public String getStatus() {
 	return status;

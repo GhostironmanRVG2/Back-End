@@ -6,20 +6,25 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import com.oreilly.servlet.MultipartRequest;  
 public class Upload extends HttpServlet {
 int s=1;
 String name_photo,ext;	
+JSONObject j=new JSONObject();
 	public void doPost(HttpServletRequest request, HttpServletResponse response)  
 		    throws ServletException, IOException {  
 		  
 		response.setContentType("application/xhtml+xml");  
 		PrintWriter out = response.getWriter();  
 		try {          
-		MultipartRequest m=new MultipartRequest(request,"C:/Users/pedro/Desktop/Projeto/Projeto/Back-end/WebContent/IMAGES/",1024*1024*1);
-		int lastIndex = name_photo.lastIndexOf('.');
+		MultipartRequest m=new MultipartRequest(request,"C:/Users/pedro/Desktop/Projeto/Projeto/Back-end/WebContent/IMAGES/");
+		name_photo=m.getFilesystemName("upload");
+		int lastIndex=name_photo.lastIndexOf(".");
 		ext = name_photo.substring(lastIndex, name_photo.length());
-		out.print("successfully uploaded");  
 		}catch(Exception e) {
 			
 		System.out.println(e);	
@@ -29,8 +34,21 @@ String name_photo,ext;
 		
         if(s==1) {
         	if(ext.equals(".jpg") || ext.equals(".JPG") || ext.equals(".png") || ext.equals(".PNG") || ext.equals(".JPEG") || ext.equals(".jpeg")) {	
-        	System.out.println("Uploaded With Sucess");
+        	
        	
+           try {
+			j.put("STATUS", "200");
+			j.put("MSG","SUCESS");
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+           
+           
+           out.print(j);
+        	
+        	
+        	
         	}else{	             
         		
         		
@@ -39,6 +57,15 @@ String name_photo,ext;
    			 if(file.delete())
    		        {
    		            System.out.println("File deleted successfully");
+   		         try {
+					j.put("STATUS", "400");
+					j.put("MSG","FAIL");
+					out.print(j);
+				} catch (JSONException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+   	           
    		        }
    		        else
    		        {
@@ -64,7 +91,14 @@ String name_photo,ext;
         }else {
 		
 		System.out.println("Something went wrong");
-		
+		 try {
+			j.put("STATUS", "400");
+			j.put("MSG","FAIL");
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	           out.print(j);
 		
         }
 		

@@ -78,9 +78,9 @@ public class SubscriptionPost extends HttpServlet {
 				int i=fpimp.insertSubscription(subscription);
 				if(i>0) {
 					doGet(req,resp,200);
-					System.out.println("Sucess");
+					
 				}else {doGet(req,resp,400);
-				       System.out.println("Something went wrong");
+				       
 				}
 			}
 }

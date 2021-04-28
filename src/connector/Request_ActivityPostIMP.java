@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Time;
 
@@ -16,7 +17,9 @@ public class Request_ActivityPostIMP {
 	String USER="BD";
 	String PASSWORD="12341234";
 	String sql="Insert into dai.request_activity (id_institution, state, description, type, county, district, address, post_code, photo, longitude, latitude, time, date) VALUE (?,?,?,?,?,?,?,?,?,?,?,?,?)";
+	String sql2="Select last_insert_id() as id_request";
 	int i;
+	int id_request;
 		public int insertRequest_Activity(Request_Activity request_activity) {
 			// TODO Auto-generated method stub
 			int inst=request_activity.getId_institution();
@@ -53,14 +56,18 @@ public class Request_ActivityPostIMP {
 				ps.setDate(13, date);
 				
 				i=ps.executeUpdate();
-				
+				PreparedStatement ps2=con.prepareStatement(sql2);
+				ResultSet rs=ps2.executeQuery(sql2);
+				rs.next();
+				id_request=rs.getInt("id_request");
 				
 			} catch (SQLException | ClassNotFoundException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
 				i=0;
 			}
-			return i;
+			
+			return id_request;
 			
 		}
 }

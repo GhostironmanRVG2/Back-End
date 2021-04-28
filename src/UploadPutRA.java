@@ -42,6 +42,13 @@ public class UploadPutRA extends HttpServlet {
 				name_photo=m.getFilesystemName("upload");
 				int lastIndex = name_photo.lastIndexOf('.');
 				 ext = name_photo.substring(lastIndex, name_photo.length());
+				 
+				 
+				 
+				 
+				 
+				 
+				 
 				}catch(Exception e) {
 					System.out.println("e");
 					s=0;

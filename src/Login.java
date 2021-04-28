@@ -56,7 +56,7 @@ public class Login extends HttpServlet {
 			        if(passwordMatch) 
 			        	
 			        {   
-			            System.out.println("Provided user password is correct.");
+			            
 			            //SACAR LOGIN TYPE
 			            UserGetIdIMP rev=new UserGetIdIMP();
 			            User k =rev.getByID(user);
@@ -66,7 +66,7 @@ public class Login extends HttpServlet {
 			        	   ChildGetByIdIMP CGBI=new ChildGetByIdIMP();
 			        	   Child l=CGBI.Get(j);
 			        	   
-			               System.out.println("Its a child");
+			               
 			        	   
 			            		
 			                doGet(req,resp,200,k,l);
@@ -124,7 +124,7 @@ public class Login extends HttpServlet {
 					        session.setAttribute("id_candidate", ñ.getId_candidate());
 					        doGet(req,resp,200,l,ñ);
 			            	
-			            	System.out.println("Instituicao");
+			            	
 			            	
 			            	
 			            	
@@ -142,13 +142,13 @@ public class Login extends HttpServlet {
 			            
 			        } else {
 			        	doGet(req,resp,400,null,null);
-			            System.out.println("Provided password is incorrect");
+			            
 			            session.invalidate();
 			        }
 				
 				}else {
 				doGet(req,resp,400,null,null);
-				System.out.println("Credentials are wrong");
+				
 				session.invalidate();
 					
 				}

@@ -19,7 +19,7 @@ import models.Request_Activity;
 
 public class Request_ActivityPost extends HttpServlet {
 	
-	protected void doGet(HttpServletRequest request, HttpServletResponse response,int cod) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response,int cod,int id_request) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		JSONObject MSG=new JSONObject();
 		Request_ActivityMSG M=new Request_ActivityMSG();
@@ -27,6 +27,7 @@ public class Request_ActivityPost extends HttpServlet {
 	    try {
 			MSG.put("STATUS", M.getStatusS());
 			MSG.put("MSG", M.getStatusMsgS());
+			MSG.put("id_request", id_request);
 			
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
@@ -100,9 +101,9 @@ public class Request_ActivityPost extends HttpServlet {
 				Request_ActivityPostIMP fpimp=new Request_ActivityPostIMP();
 				int i=fpimp.insertRequest_Activity(request_activity);
 				if(i>0) {
-					doGet(req,resp,200);
+					doGet(req,resp,200,i);
 					System.out.println("Sucess");
-				}else {doGet(req,resp,400);
+				}else {doGet(req,resp,400,-1);
 				       System.out.println("Something went wrong");
 				}
 			}

@@ -19,7 +19,7 @@ public class Request_ActivityPorIdNotActivitiesGETIMP {
 	String URL="jdbc:mysql://localhost:3306";
 	String USER="BD";
 	String PASSWORD="12341234";
-	String sql="Select * from dai.request_activity where id_institution= ? and id_request not in (select id_request from dai.activity) ";
+	String sql="Select r.id_request,r.state,r.description,r.type,r.county,r.district,r.address,r.post_code,r.photo,r.date,r.time,r.latitude,r.longitude,a.id_activity,a.id_reward,a.state as activity_state from dai.request_activity r LEFT JOIN dai.activity a on r.id_request=a.id_request where id_institution=? order by a.id_activity; ";
 	ResultSet rs;
 	List<Request_Activity> lista=new ArrayList<Request_Activity>();
 	Request_Activity o=new Request_Activity();
@@ -34,7 +34,7 @@ public class Request_ActivityPorIdNotActivitiesGETIMP {
 						PreparedStatement ps=con.prepareStatement(sql);
 						ps.setInt(1,id_institution);
 				            rs=ps.executeQuery();
-				           rs.next();
+				          while(rs.next()) {
 			            	int id_request =rs.getInt("id_request");
 			            	String state=rs.getString("state");
 			            	String description=rs.getString("description");
@@ -48,10 +48,13 @@ public class Request_ActivityPorIdNotActivitiesGETIMP {
 			            	Time time=rs.getTime("time");
 			            	float latitude=rs.getFloat("latitude");
 			            	float longitude=rs.getFloat("longitude");
+			            	String activity_state=rs.getString("activity_state");
+			            	int id_activity=rs.getInt("id_activity");
+			            	int id_reward=rs.getInt("id_reward");
 			            	
 				          
-				            lista.add(new Request_Activity(time,date,state,description,type,county,district,address,latitude,longitude,post_code,photo,id_institution,id_request));
-				  
+				            lista.add(new Request_Activity(time,date,state,description,type,county,district,address,latitude,longitude,post_code,photo,id_institution,id_request,activity_state,id_activity,id_reward));
+				          }
 						
 					} catch (SQLException | ClassNotFoundException e1) {
 						// TODO Auto-generated catch block
