@@ -1001,7 +1001,27 @@
   
   
   
+   <servlet>
+  <servlet-name>InstitutionUserCandidateGet</servlet-name>
+  <servlet-class>InstitutionUserCandidateGet</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>InstitutionUserCandidateGet</servlet-name>
+  <url-pattern>/InstitutionUserCandidateGet</url-pattern>
+  </servlet-mapping>
   
+  
+  
+  <servlet>
+  <servlet-name>ChildUserGet</servlet-name>
+  <servlet-class>ChildUserGet</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ChildUserGet</servlet-name>
+  <url-pattern>/ChildUserGet</url-pattern>
+  </servlet-mapping>
   
   
   

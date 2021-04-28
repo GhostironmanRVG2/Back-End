@@ -1,11 +1,8 @@
 package models;
 
 public class Child {
-	String name,birth_date,photo;
+	String name,birth_date,photo,login_type,status;
 	int id_child,id_user,phone_number_tutor,total_points;
-
-	
-	
 	
 	
 	public Child() {
@@ -25,6 +22,53 @@ public class Child {
 		this.id_child = id_child;
 		this.id_user = id_user;
 		this.phone_number_tutor = phone_number_tutor;
+	}
+	
+	
+	public Child(int id_user,String login_type,String status,int id_child,String name,int total_points,String birth_date,String photo,int phone_number_tutor) {
+		super();
+		//CHILD WITH USER JOIN
+		this.login_type=login_type;
+		this.status=status;
+		this.total_points=total_points;
+		this.name = name;
+		this.birth_date = birth_date;
+		this.photo = photo;
+		this.id_child = id_child;
+		this.id_user = id_user;
+		this.phone_number_tutor = phone_number_tutor;
+	}
+
+
+
+	
+
+	public String getLogin_type() {
+		return login_type;
+	}
+
+
+
+
+
+	public void setLogin_type(String login_type) {
+		this.login_type = login_type;
+	}
+
+
+
+
+
+	public String getStatus() {
+		return status;
+	}
+
+
+
+
+
+	public void setStatus(String status) {
+		this.status = status;
 	}
 
 
