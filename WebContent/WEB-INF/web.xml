@@ -1023,7 +1023,15 @@
   <url-pattern>/ChildUserGet</url-pattern>
   </servlet-mapping>
   
-  
+        <servlet>
+  <servlet-name>CollaboratorUserJOINGet</servlet-name>
+  <servlet-class>CollaboratorUserJOINGet</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>CollaboratorUserJOINGet</servlet-name>
+  <url-pattern>/CollaboratorUserJOINGet</url-pattern>
+  </servlet-mapping>
   
   
     <servlet>
