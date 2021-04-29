@@ -50,7 +50,8 @@ JSONObject j=new JSONObject();
 		    }else {
 		    	
 		    	try {
-					j.put("STATUS",400);
+					j.put("STATUS",401);
+					j.put("MSG", "THIS ACCOUNT IS LINKED TO ANOTHER DEVICE");
 				} catch (JSONException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -71,6 +72,7 @@ JSONObject j=new JSONObject();
 		    	
 		    	try {
 					j.put("STATUS",400);
+					j.put("MSG","THIS ACCOUNT DOESNT HAVE PERMISSION TO BIOMETRIC LOGIN");
 				} catch (JSONException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();

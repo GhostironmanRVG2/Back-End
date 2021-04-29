@@ -1,9 +1,10 @@
 package models;
 
+
+
 public class Child {
-	String name,birth_date,photo,login_type,status;
-	int id_child,id_user,phone_number_tutor,total_points;
-	
+	String name,birth_date,photo,login_type,status,evaluation,photo_1,photo_2,state;
+	int id_child,id_user,phone_number_tutor,total_points,id_activity;
 	
 	public Child() {
 		super();
@@ -13,6 +14,25 @@ public class Child {
 
 
 
+	public Child(int id_child, String name,int total_points,String birth_date,String photo,int id_user,int phone_number_tutor,int id_activity,String evaluation,String photo_1,String photo_2,String state) {
+		super();
+		//CHILD WITH SUBS
+		this.id_activity=id_activity;
+		this.evaluation=evaluation;
+		this.photo_1=photo_1;
+		this.photo_2=photo_2;
+		this.state=state;
+		this.total_points=total_points;
+		this.name = name;
+		this.birth_date = birth_date;
+		this.photo = photo;
+		this.id_child = id_child;
+		this.id_user = id_user;
+		this.phone_number_tutor = phone_number_tutor;
+	}
+	
+	
+	
 	public Child(String name, String birth_date, String photo, int id_child, int id_user, int phone_number_tutor,int total_points) {
 		super();
 		this.total_points=total_points;
@@ -23,6 +43,9 @@ public class Child {
 		this.id_user = id_user;
 		this.phone_number_tutor = phone_number_tutor;
 	}
+	
+	
+	
 	
 	
 	public Child(int id_user,String login_type,String status,int id_child,String name,int total_points,String birth_date,String photo,int phone_number_tutor) {
