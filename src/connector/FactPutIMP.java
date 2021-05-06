@@ -30,6 +30,7 @@ int i;
 			ps.setString(2,description);
 			ps.setString(3, photo);
 			ps.setInt(4, id_fact);
+			i=ps.executeUpdate();
 			
 			
 			
@@ -37,6 +38,7 @@ int i;
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 			i=0;
+			
 		}
        
 		return i;

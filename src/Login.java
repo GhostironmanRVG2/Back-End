@@ -95,6 +95,7 @@ public class Login extends HttpServlet {
 					        session.setAttribute("post_code",ñ.getPost_code());
 					        session.setAttribute("type", ñ.getType());
 					        session.setAttribute("id_collaborator", ñ.getId_collaborator());
+					       
 					        doGet(req,resp,200,l,ñ);
 			            	
 			            	
@@ -225,7 +226,7 @@ public class Login extends HttpServlet {
 	    	MSG.put("name",c.getName() );
 	    	MSG.put("post_code",c.getPost_code() );
 	    	MSG.put("type",c.getType() );
-	        MSG.put("PATH", "backoffice/CM_index.html");
+	        MSG.put("PATH", "backoffice/CM_ActionPlan.html");
 	    		
 	    		
 	    		

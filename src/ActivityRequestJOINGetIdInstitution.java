@@ -1,4 +1,5 @@
+import javax.servlet.http.HttpServlet;
 
-public class ActivityRequestJOINGetIdInstitution {
+public class ActivityRequestJOINGetIdInstitution extends HttpServlet {
 
 }
