@@ -2,7 +2,7 @@ package models;
 
 public class Institution {
 
-	int id_institution, id_user, id_candidate,phone_number,nif;
+	int id_institution, id_user, id_candidate,phone_number,nif,count;
 	String login_type,status,name,address,county,district,post_code;
 	
 	
