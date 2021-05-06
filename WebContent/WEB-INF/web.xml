@@ -1088,10 +1088,6 @@
   
   
   
-  
-  
-  
-  
   <servlet>
   <servlet-name>FactGetById</servlet-name>
   <servlet-class>FactGetById</servlet-class>
@@ -1105,7 +1101,71 @@
   
   
   
+    
+          <servlet>
+  <servlet-name>ActivityRequestJOINGetIdInstitution</servlet-name>
+  <servlet-class>ActivityRequestJOINGetIdInstitution</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ActivityRequestJOINGetIdInstitution</servlet-name>
+  <url-pattern>/ActivityRequestJOINGetIdInstitution</url-pattern>
+  </servlet-mapping>
   
+  
+          <servlet>
+  <servlet-name>ChildSubscriptionJoinStateGet</servlet-name>
+  <servlet-class>ChildSubscriptionJoinStateGet</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ChildSubscriptionJoinStateGet</servlet-name>
+  <url-pattern>/ChildSubscriptionJoinStateGet</url-pattern>
+  </servlet-mapping>
+  
+  
+          <servlet>
+  <servlet-name>ChildSubscritpionGetIdInstitution</servlet-name>
+  <servlet-class>ChildSubscritpionGetIdInstitution</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ChildSubscritpionGetIdInstitution</servlet-name>
+  <url-pattern>/ChildSubscritpionGetIdInstitution</url-pattern>
+  </servlet-mapping>
+  
+  
+          <servlet>
+  <servlet-name>CollaboratorPutByCollaborator</servlet-name>
+  <servlet-class>CollaboratorPutByCollaborator</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>CollaboratorPutByCollaborator</servlet-name>
+  <url-pattern>/CollaboratorPutByCollaborator</url-pattern>
+  </servlet-mapping>
+  
+  
+          <servlet>
+  <servlet-name>InstitutionDelete</servlet-name>
+  <servlet-class>InstitutionDelete</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>InstitutionDelete</servlet-name>
+  <url-pattern>/InstitutionDelete</url-pattern>
+  </servlet-mapping>
+  
+  
+          <servlet>
+  <servlet-name>SubscriptionStatePut</servlet-name>
+  <servlet-class>SubscriptionStatePut</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>SubscriptionStatePut</servlet-name>
+  <url-pattern>/SubscriptionStatePut</url-pattern>
+  </servlet-mapping>
   
   
   
