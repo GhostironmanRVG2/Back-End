@@ -1050,4 +1050,65 @@
   
   
   
+      <servlet>
+  <servlet-name>CandidatePost</servlet-name>
+  <servlet-class>CandidatePost</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>CandidatePost</servlet-name>
+  <url-pattern>/CandidatePost</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+   <servlet>
+  <servlet-name>InstitutionCandidateJByIdGet</servlet-name>
+  <servlet-class>InstitutionCandidateJByIdGet</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>InstitutionCandidateJByIdGet</servlet-name>
+  <url-pattern>/InstitutionCandidateJByIdGet</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  <servlet>
+  <servlet-name>CandidateInstitutionPut</servlet-name>
+  <servlet-class>CandidateInstitutionPut</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>CandidateInstitutionPut</servlet-name>
+  <url-pattern>/CandidateInstitutionPut</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  
+  
+  <servlet>
+  <servlet-name>FactGetById</servlet-name>
+  <servlet-class>FactGetById</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>FactGetById</servlet-name>
+  <url-pattern>/FactGetById</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 </web-app>
