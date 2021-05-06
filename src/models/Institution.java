@@ -40,7 +40,22 @@ public class Institution {
 	}
 	
 	
-	
+	public Institution(int id_user, String login_type,String status, int id_institution, int id_candidate,String name,int nif,String address,String county,String district,String post_code,int phone_number,int count) {
+        //JOIN CANDIDATE USER
+        this.address=address;
+        this.county=county;
+        this.district=district;
+        this.login_type=login_type;
+        this.name=name;
+        this.nif=nif;
+        this.phone_number=phone_number;
+        this.post_code=post_code;
+        this.status=status;
+        this.id_institution = id_institution;
+        this.id_user = id_user;
+        this.id_candidate = id_candidate;
+        this.count = count;
+    }
 	
 	
 	public int getPhone_number() {
