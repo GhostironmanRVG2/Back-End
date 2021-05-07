@@ -16,7 +16,7 @@ import models.User;
 
 public class UserDelete extends HttpServlet {
 
-	protected void doPut(HttpServletRequest req,HttpServletResponse resp)
+	protected void doGet(HttpServletRequest req,HttpServletResponse resp)
 			throws ServletException,IOException{
 	           			
 		      //Parametros
