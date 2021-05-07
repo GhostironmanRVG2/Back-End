@@ -35,6 +35,7 @@ public class InstitutionUserCandidateGetIMP {
 		            int id_candidate =rs.getInt("id_candidate");
 		            int nif=rs.getInt("nif");
 		            int phone_number=rs.getInt("phone_number");
+		            int count=rs.getInt("count");
 		            String login_type =rs.getString("login_type");
 		            String status =rs.getString("status");
 		            String name=rs.getString("name");
@@ -45,7 +46,7 @@ public class InstitutionUserCandidateGetIMP {
 	                
 	                
 	                
-		            lista.add(new Institution(id_user,login_type,status,id_institution,id_candidate,name,nif,address,county,district,post_code,phone_number));
+		            lista.add(new Institution(id_user,login_type,status,id_institution,id_candidate,name,nif,address,county,district,post_code,phone_number,count));
 		            
 	            }
 		            
