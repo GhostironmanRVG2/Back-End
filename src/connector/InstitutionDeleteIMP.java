@@ -1,3 +1,4 @@
+
 package connector;
 
 import java.sql.Connection;
@@ -5,29 +6,25 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import models.Subscription;
+import models.Institution;
 
-public class SubscriptionDeleteIMP {
+public class InstitutionDeleteIMP {
 	String DRIVER="com.mysql.jdbc.Driver";
 	String URL="jdbc:mysql://localhost:3306";
 	String USER="BD";
 	String PASSWORD="12341234";
-	String sql="delete from dai.subscription where id_activity = ? and id_child = ?";
+	String sql="update dai.institution i, dai.user u set u.status='Inativo' where i.id_institution = ? and i.id_user=u.id_user";
 	int i;
-	int idc;
-	int ida;
-	public int SDelete(Subscription s) {
-		ida=s.getId_activity();
-		System.out.println(ida);
-		idc=s.getId_child();
-		System.out.println(idc);
+	int id;
+	public int IDelete(Institution f) {
+		id=f.getId_institution();
+		System.out.println(id);
 		
 		try {
 			Class.forName(DRIVER);
 			Connection con=DriverManager.getConnection(URL,USER,PASSWORD);
 			PreparedStatement ps=con.prepareStatement(sql);
-			ps.setInt(1, ida);
-			ps.setInt(2,  idc);
+			ps.setInt(1, id);
 			i=ps.executeUpdate();
 			
 		} catch (SQLException | ClassNotFoundException e1) {
@@ -38,11 +35,6 @@ public class SubscriptionDeleteIMP {
 		return i;
 		
 	}
-		
-		
-		
-		
-		
 		
 
 }
