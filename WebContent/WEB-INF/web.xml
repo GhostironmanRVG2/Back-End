@@ -1223,6 +1223,30 @@
   
   
   
+         <servlet>
+  <servlet-name>SubscriptionDelete</servlet-name>
+  <servlet-class>SubscriptionDelete</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>SubscriptionDelete</servlet-name>
+  <url-pattern>/SubscriptionDelete</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+      <servlet>
+  <servlet-name>InstitutionDelete</servlet-name>
+  <servlet-class>InstitutionDelete</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>InstitutionDelete</servlet-name>
+  <url-pattern>/InstitutionDelete</url-pattern>
+  </servlet-mapping>
+  
   
   
   
