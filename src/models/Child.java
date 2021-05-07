@@ -66,6 +66,22 @@ public class Child {
 
 	
 
+	public String getState() {
+		return state;
+	}
+
+
+
+
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+
+
+
+
 	public String getLogin_type() {
 		return login_type;
 	}

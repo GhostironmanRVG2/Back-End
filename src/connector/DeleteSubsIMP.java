@@ -1,0 +1,70 @@
+package connector;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import models.Subscription;
+
+public class DeleteSubsIMP {
+
+	
+	String DRIVER="com.mysql.jdbc.Driver";
+String URL="jdbc:mysql://localhost:3306";
+String USER="BD";
+String PASSWORD="12341234";
+String sql="DELETE FROM dai.subscription WHERE id_activity=? and id_child=? ";
+int i;
+	
+	
+	
+	public int delete(Subscription s) {
+		
+		int id_activity=s.getId_activity();
+		int id_child=s.getId_child();
+		
+		
+		
+		
+		
+		//DRIVER
+	       try {
+				Class.forName(DRIVER);
+				Connection con=DriverManager.getConnection(URL,USER,PASSWORD);
+				PreparedStatement ps=con.prepareStatement(sql);
+				ps.setInt(1, id_activity);
+				ps.setInt(2, id_child);
+				i=ps.executeUpdate();
+				
+				
+			} catch (SQLException | ClassNotFoundException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+				i=0;
+			}
+	       
+			return i;
+			
+			
+			
+		}
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+

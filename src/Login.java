@@ -240,7 +240,7 @@ public class Login extends HttpServlet {
 				MSG.put("status_user",h.getStatus());
 				//dados 
 				 in=(Candidate_Institution)login;
-				 MSG.put("PATH", "backoffice/CM_index.html");
+				 MSG.put("PATH", "backoffice/IT_ListActivies.html");
 				 MSG.put("id_candidate",in.getId_candidate() );
 				 MSG.put("nif",in.getNif() );
 				 MSG.put("phone_number",in.getPhone_number() );

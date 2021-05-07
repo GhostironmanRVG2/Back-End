@@ -1,3 +1,8 @@
 /connector/
 /ActivityRequestJOINGetIdInstitutionIMP.class
 /ActivityRequestJOINGetIdInstitution.class
+/ChildGetById.class
+/ChildPutByIdUserWeb.class
+/models/
+/UserDelete.class
+/DeleteSubs.class

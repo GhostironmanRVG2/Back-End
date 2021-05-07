@@ -1,7 +1,7 @@
 package models;
 
 public class User {
- String email,password,salt,login_type,status,pass_changer,Android_ID;
+ String email,password,salt,login_type,status,pass_changer,Android_ID,state;
  int id_user;
  
  
@@ -10,7 +10,17 @@ public class User {
  
  
  
- public User() {
+ public String getState() {
+	return state;
+}
+
+
+public void setState(String state) {
+	this.state = state;
+}
+
+
+public User() {
 	super();
 }
 

@@ -13,7 +13,7 @@ public class ChildGetByIdIMP {
 	String URL="jdbc:mysql://localhost:3306";
 	String USER="BD";
 	String PASSWORD="12341234";
-	String sql="Select * from dai.Child where id_user=?";
+	String sql="Select c.birth_date,c.id_child,c.name,c.phone_number_tutor,c.photo,c.total_points,u.status as state,c.id_user from dai.Child c join dai.user u on c.id_user=u.id_user  where c.id_user=?";
 	Child newo=new Child();
 	ResultSet rs;
 	public Child Get(Child chi) {
@@ -33,6 +33,7 @@ public class ChildGetByIdIMP {
 			            newo.setPhone_number_tutor(rs.getInt("phone_number_tutor"));
 			            newo.setPhoto(rs.getString("photo"));
 			            newo.setTotal_points(rs.getInt("total_points"));
+			            newo.setState(rs.getString("state"));
 			            
 					
 					

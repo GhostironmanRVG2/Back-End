@@ -1169,6 +1169,67 @@
   
   
   
+   <servlet>
+  <servlet-name>ChildGetById</servlet-name>
+  <servlet-class>ChildGetById</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ChildGetById</servlet-name>
+  <url-pattern>/ChildGetById</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+     <servlet>
+  <servlet-name>ChildPutByIdUserWeb</servlet-name>
+  <servlet-class>ChildPutByIdUserWeb</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ChildPutByIdUserWeb</servlet-name>
+  <url-pattern>/ChildPutByIdUserWeb</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+       <servlet>
+  <servlet-name>UserDelete</servlet-name>
+  <servlet-class>UserDelete</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>UserDelete</servlet-name>
+  <url-pattern>/UserDelete</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+      <servlet>
+  <servlet-name>DeleteSubs</servlet-name>
+  <servlet-class>DeleteSubs</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>DeleteSubs</servlet-name>
+  <url-pattern>/DeleteSubs</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  
+
+  
+  
+  
   
   
 </web-app>

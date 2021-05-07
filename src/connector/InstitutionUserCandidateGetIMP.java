@@ -16,7 +16,7 @@ public class InstitutionUserCandidateGetIMP {
 	String URL="jdbc:mysql://localhost:3306";
 	String USER="BD";
 	String PASSWORD="12341234";
-	String sql="Select sum(case when a.state = \"ConcluÃ­do\" then 1 else 0 end) as count, u.id_user,u.login_type,u.status,i.id_institution,i.id_candidate,c.name,c.nif,c.address,c.county,c.district,c.post_code,c.phone_number from dai.user u join dai.institution i on i.id_user=u.id_user join dai.candidate_institution c on c.id_candidate=i.id_candidate join dai.request_activity r on i.id_institution=r.id_institution join dai.activity a on a.id_request=r.id_request";
+	String sql="Select sum(case when a.state = 'Concluído' then 1 else 0 end) as count, u.id_user,u.login_type,u.status,i.id_institution,i.id_candidate,c.name,c.nif,c.address,c.county,c.district,c.post_code,c.phone_number from dai.user u join dai.institution i on i.id_user=u.id_user join dai.candidate_institution c on c.id_candidate=i.id_candidate join dai.request_activity r on i.id_institution=r.id_institution join dai.activity a on a.id_request=r.id_request";
     ResultSet rs;
     List<Institution> lista=new ArrayList<Institution>();
 	public List<Institution> get() {
