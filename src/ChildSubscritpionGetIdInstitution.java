@@ -28,7 +28,6 @@ public class ChildSubscritpionGetIdInstitution extends HttpServlet {
 		//PASSAR O OBJETO
 		ChildSubscritpionGetIdInstitutionIMP subsc=new ChildSubscritpionGetIdInstitutionIMP();
 		l=subsc.GetID(cand);
-		 
 		
 		//JSON OBJECT
 		JSONObject MSG=new JSONObject();

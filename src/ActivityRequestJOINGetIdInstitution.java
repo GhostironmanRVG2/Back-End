@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-
+import connector.ActivityRequestJOINGetIdInstitutionIMP;
 import connector.ActivityRequestJoinGetByIdActivityIMP;
 import models.ActivityRequestJOIN;
 
@@ -25,10 +25,11 @@ public class ActivityRequestJOINGetIdInstitution extends HttpServlet {
 		//Create a object
 		id=request.getParameter("id_institution");
 		id_institution=Integer.valueOf(id);
+		
 		ActivityRequestJOIN subs=new ActivityRequestJOIN();
 		subs.setId_institution(id_institution);
 		//PASSAR O OBJETO
-		ActivityRequestJoinGetByIdActivityIMP subsc=new ActivityRequestJoinGetByIdActivityIMP();
+		ActivityRequestJOINGetIdInstitutionIMP subsc=new ActivityRequestJOINGetIdInstitutionIMP();
 		l=subsc.Get(subs);
 		 
 		

@@ -3,6 +3,7 @@ import java.io.PrintWriter;
 
 import connector.ChildGetByIdIMP;
 import connector.CollabGetByIDUimp;
+import connector.InstitutionGetByIdCandidateIMP;
 import connector.InstitutionGetByIdIMP;
 import connector.LoginIMP;
 import assets.LoginMSG;
@@ -112,7 +113,7 @@ public class Login extends HttpServlet {
 				            User l=rev.getByID(user);
 			            	//CRIAR INSTI
 				            InstitutionGetByIdIMP insti=new InstitutionGetByIdIMP();
-				            Candidate_Institution ñ=insti.get(k);
+				            Candidate_Institution ñ=insti.get(l);
 				            session.setAttribute("header","Institution");
 					        session.setAttribute("address",ñ.getAddress());
 					        session.setAttribute("county", ñ.getCounty());
@@ -240,8 +241,10 @@ public class Login extends HttpServlet {
 				MSG.put("status_user",h.getStatus());
 				//dados 
 				 in=(Candidate_Institution)login;
-				 MSG.put("PATH", "backoffice/IT_ListActivies.html");
+				 MSG.put("PATH", "backoffice/IT_ListActivities.html");
 				 MSG.put("id_candidate",in.getId_candidate() );
+				 InstitutionGetByIdCandidateIMP I=new InstitutionGetByIdCandidateIMP();
+				 MSG.put("id_institution",I.get(in.getId_candidate()) );
 				 MSG.put("nif",in.getNif() );
 				 MSG.put("phone_number",in.getPhone_number() );
 				 MSG.put("address",in.getAddress() );

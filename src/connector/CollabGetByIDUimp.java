@@ -35,7 +35,7 @@ public class CollabGetByIDUimp {
 				        c.setCounty(rs.getString("county"));
 				        c.setDistrict(rs.getString("district"));
 				        c.setId_collaborator(rs.getInt("id_collaborator"));
-				        c.setId_user(rs.getInt("id_user"));
+				        c.setId_user(id_user);
 				        c.setName(rs.getString("name"));
 				        c.setNif(rs.getInt("nif"));
 				        c.setPhone_number(rs.getInt("phone_number"));
