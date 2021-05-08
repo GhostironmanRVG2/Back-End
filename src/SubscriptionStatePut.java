@@ -36,33 +36,47 @@ public class SubscriptionStatePut extends HttpServlet {
 		     
 		     
 		     
-		     SubscriptionStatePutIMP S2=new SubscriptionStatePutIMP();
-		     int i=S2.put(S);
-		     
-		     
-		     
-		     
-		     if(i==1) {
-		    	 
-		    	 try {
-					j.put("STATUS", "200");
-					 j.put("MSG", "DADOS ALTERADOS COM SUCESSO");
-				} catch (JSONException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+		     SubscriptionStatePutIMP API=new SubscriptionStatePutIMP();
+				int i= API.put(S);
+				if(i>0) {
+					doGet(req,resp,200);
+					System.out.println("Sucess");
+				}else {doGet(req,resp,400);
+				       System.out.println("Something went wrong");
+
+				
 				}
-		    	
-  	 
-		     }else {
-		    	 
-             try {
-				j.put("STATUS", "400");
-				j.put("MSG", "ERROR PUTTING THE DATA");
+	
+				
+				
+
+
+			}
+	
+	
+	
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse resp,int cod) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		JSONObject MSG=new JSONObject();
+		SubscriptionMSG M=new SubscriptionMSG();
+		if(cod==200) {
+	    try {
+			MSG.put("STATUS", M.getStatusS());
+			MSG.put("MSG", M.getUpdateSucess());
+			
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		}else{
+			try {
+				MSG.put("STATUS",M.getStatusF());
+				MSG.put("MSG", M.getUpdateFailure());
 			} catch (JSONException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-             
  
 		    	 
 		     }
