@@ -31,7 +31,16 @@ public class Candidate_Institution {
 	}
 	
 	
-	
+		public Candidate_Institution(int id_candidate, String name, String address, String county, String district, String post_code, int phone_number) {
+		super();
+		this.name = name;
+		this.address = address;
+		this.county = county;
+		this.district = district;
+		this.post_code = post_code;
+		this.phone_number = phone_number;
+		this.id_candidate = id_candidate;
+	}
 	
 	public String getEmail() {
 		return email;
