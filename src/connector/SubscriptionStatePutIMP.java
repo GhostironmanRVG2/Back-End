@@ -18,7 +18,7 @@ int i;
 	public int put(Subscription s) {
 		  int id_child=s.getId_child();
 		  int id_activity=s.getId_activity();
-		  String state=s.getEvaluation();
+		  String state=s.getState();
 		
 	       //DRIVER
 	       try {

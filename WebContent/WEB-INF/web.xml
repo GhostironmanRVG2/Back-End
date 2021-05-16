@@ -1253,6 +1253,10 @@
   <url-pattern>/EvaluationActivityPut</url-pattern>
   </servlet-mapping>
   
+  
+  
+  
+  
           <servlet>
   <servlet-name>EvaluationActivityPost</servlet-name>
   <servlet-class>EvaluationActivityPost</servlet-class>
@@ -1262,6 +1266,55 @@
   <servlet-name>EvaluationActivityPost</servlet-name>
   <url-pattern>/EvaluationActivityPost</url-pattern>
   </servlet-mapping>
+  
+  
+  
+  
+  
+  
+  <servlet>
+  <servlet-name>SubscriptionCurrentYearMonthGet</servlet-name>
+  <servlet-class>SubscriptionCurrentYearMonthGet</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>SubscriptionCurrentYearMonthGet</servlet-name>
+  <url-pattern>/SubscriptionCurrentYearMonthGet</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <servlet>
+  <servlet-name>Request_activityCurrentYearMounthGet</servlet-name>
+  <servlet-class>Request_activityCurrentYearMounthGet</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>Request_activityCurrentYearMounthGet</servlet-name>
+  <url-pattern>/Request_activityCurrentYearMounthGet</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  
+  <servlet>
+  <servlet-name>ActivityMounthGet</servlet-name>
+  <servlet-class>ActivityMounthGet</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ActivityMounthGet</servlet-name>
+  <url-pattern>/ActivityMounthGet</url-pattern>
+  </servlet-mapping>
+  
   
   
 </web-app>
