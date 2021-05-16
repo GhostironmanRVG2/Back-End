@@ -1233,11 +1233,35 @@
   <url-pattern>/CandidatePut</url-pattern>
   </servlet-mapping>
   
-  
+          <servlet>
+  <servlet-name>ActivityRequestPutSemState</servlet-name>
+  <servlet-class>ActivityRequestPutSemState</servlet-class>
 
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ActivityRequestPutSemState</servlet-name>
+  <url-pattern>/ActivityRequestPutSemState</url-pattern>
+  </servlet-mapping>
+
+          <servlet>
+  <servlet-name>EvaluationActivityPut</servlet-name>
+  <servlet-class>EvaluationActivityPut</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>EvaluationActivityPut</servlet-name>
+  <url-pattern>/EvaluationActivityPut</url-pattern>
+  </servlet-mapping>
   
-  
-  
+          <servlet>
+  <servlet-name>EvaluationActivityPost</servlet-name>
+  <servlet-class>EvaluationActivityPost</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>EvaluationActivityPost</servlet-name>
+  <url-pattern>/EvaluationActivityPost</url-pattern>
+  </servlet-mapping>
   
   
 </web-app>
