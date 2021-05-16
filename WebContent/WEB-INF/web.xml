@@ -1223,7 +1223,15 @@
   
   
   
-  
+        <servlet>
+  <servlet-name>CandidatePut</servlet-name>
+  <servlet-class>CandidatePut</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>CandidatePut</servlet-name>
+  <url-pattern>/CandidatePut</url-pattern>
+  </servlet-mapping>
   
   
 
