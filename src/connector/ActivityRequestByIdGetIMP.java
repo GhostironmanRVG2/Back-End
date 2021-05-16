@@ -19,7 +19,7 @@ public class ActivityRequestByIdGetIMP {
 	String URL="jdbc:mysql://localhost:3306";
 	String USER="BD";
 	String PASSWORD="12341234";
-	String sql="Select request_activity.id_request,request_activity.id_institution,request_activity.date,request_activity.time,request_activity.type,request_activity.county,request_activity.district,request_activity.address,request_activity.state,request_activity.post_code,request_activity.latitude,request_activity.longitude,request_activity.description,request_activity.photo,reward.points from dai.request_activity JOIN dai.activity ON request_activity.id_request=activity.id_request JOIN dai.subscription ON subscription.id_activity=activity.id_activity JOIN dai.reward ON reward.id_reward=activity.id_reward  where subscription.id_child=? and subscription.state=? and request_activity.date>CURDATE() OR (request_activity.date=CURDATE() and request_activity.time<=CURTIME())";
+	String sql="Select request_activity.id_request,request_activity.id_institution,request_activity.date,request_activity.time,request_activity.type,request_activity.county,request_activity.district,request_activity.address,request_activity.state,request_activity.post_code,request_activity.latitude,request_activity.longitude,request_activity.description,request_activity.photo,reward.points from dai.request_activity JOIN dai.activity ON request_activity.id_request=activity.id_request JOIN dai.subscription ON subscription.id_activity=activity.id_activity JOIN dai.reward ON reward.id_reward=activity.id_reward  where subscription.id_child=? and subscription.state=?";
 	ResultSet rs;
 	List<Request_ActivityP> lista=new ArrayList<Request_ActivityP>();
 	Request_Activity o=new Request_Activity();
