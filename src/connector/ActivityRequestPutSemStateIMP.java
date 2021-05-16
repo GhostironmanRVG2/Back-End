@@ -12,9 +12,9 @@ import models.Request_Activity;
 
 public class ActivityRequestPutSemStateIMP {
 	String DRIVER="com.mysql.jdbc.Driver";
-	String URL="jdbc:mysql://188.82.156.135:3306";
-	String USER="monkey";
-	String PASSWORD="monkey";
+	String URL="jdbc:mysql://localhost:3306";
+	String USER="BD";
+	String PASSWORD="12341234";
 String sql="Update dai.request_activity set address=?,county=?,description=?,district=?,latitude=?,longitude=?,post_code=?,type=?,date=?,time=? where id_request=?";
 int i;
 	public int Put(Request_Activity r) {
