@@ -21,7 +21,7 @@ public class ActivityRequestJOINGetIdInstitutionIMP{
 	String URL="jdbc:mysql://localhost:3306";
 	String USER="BD";
 	String PASSWORD="12341234";
-	String sql="Select a.id_request, a.id_reward, a.id_activity, r.time, r.date, a.state, r.description, r.type, r.county, r.district, r.address, r.post_code, r.latitude, r.longitude, r.photo, r.id_institution, c.name, r.state as state_request from dai.institution i left join dai.request_activity r on r.id_institution = i.id_institution left join dai.activity a on r.id_request = a.id_request left join dai.candidate_institution c on i.id_candidate=c.id_candidate where i.id_institution = ?";
+	String sql="Select r.id_request, a.id_reward, a.id_activity, r.time, r.date, a.state, r.description, r.type, r.county, r.district, r.address, r.post_code, r.latitude, r.longitude, r.photo, i.id_institution, c.name, r.state as state_request from dai.institution i left join dai.request_activity r on r.id_institution = i.id_institution left join dai.activity a on r.id_request = a.id_request left join dai.candidate_institution c on i.id_candidate=c.id_candidate where i.id_institution = ?";
 	ResultSet rs;
 	
 	List<ActivityRequestJOIN> lista=new ArrayList<ActivityRequestJOIN>();
