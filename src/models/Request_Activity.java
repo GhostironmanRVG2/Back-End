@@ -68,7 +68,23 @@ public class Request_Activity {
 	}
 	
 	
-	
+		public Request_Activity(Time time, Date date, String description, String type, String county,
+			String district, String address,float latitude,float longitude ,String post_code, String photo, int id_institution, int id_request) {
+		super();
+		this.latitude=latitude;
+		this.longitude=longitude;
+		this.time = time;
+		this.date = date;
+		this.description = description;
+		this.type = type;
+		this.county = county;
+		this.district = district;
+		this.address = address;
+		this.post_code = post_code;
+		this.photo = photo;
+		this.id_institution = id_institution;
+		this.id_request = id_request;
+	}
 	
 	
 	
