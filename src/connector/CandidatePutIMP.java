@@ -11,9 +11,9 @@ import models.Candidate_Institution;
 
 public class CandidatePutIMP {
 	String DRIVER="com.mysql.jdbc.Driver";
-	String URL="jdbc:mysql://188.82.156.135:3306";
-	String USER="monkey";
-	String PASSWORD="monkey";
+	String URL="jdbc:mysql://localhost:3306";
+	String USER="BD";
+	String PASSWORD="12341234";
 String sql="Update dai.candidate_institution set name=?,address=?,county=?,district=?,post_code=?,phone_number=? where id_candidate=?";
 int i;
 public int Put(Candidate_Institution r) {
