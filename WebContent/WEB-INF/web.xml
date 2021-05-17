@@ -1315,6 +1315,41 @@
   <url-pattern>/ActivityMounthGet</url-pattern>
   </servlet-mapping>
   
+    
+  <servlet>
+  <servlet-name>EvaluationActivityGetId</servlet-name>
+  <servlet-class>EvaluationActivityGetId</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>EvaluationActivityGetId</servlet-name>
+  <url-pattern>/EvaluationActivityGetId</url-pattern>
+  </servlet-mapping>
+  
+  
+    
+  <servlet>
+  <servlet-name>ChildSubscritpionGetIdInstitution</servlet-name>
+  <servlet-class>ChildSubscritpionGetIdInstitution</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ChildSubscritpionGetIdInstitution</servlet-name>
+  <url-pattern>/ChildSubscritpionGetIdInstitution</url-pattern>
+  </servlet-mapping>
+  
+  
+    
+  <servlet>
+  <servlet-name>MediaPointsER</servlet-name>
+  <servlet-class>MediaPointsER</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>MediaPointsER</servlet-name>
+  <url-pattern>/MediaPointsER</url-pattern>
+  </servlet-mapping>
+  
   
   
 </web-app>
