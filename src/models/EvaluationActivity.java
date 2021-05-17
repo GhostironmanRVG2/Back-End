@@ -18,6 +18,11 @@ public class EvaluationActivity {
 
 
 
+	public EvaluationActivity(float points) {
+		super();
+		this.points = points;
+	}
+
 	public int getId_child() {
 		return id_child;
 	}
