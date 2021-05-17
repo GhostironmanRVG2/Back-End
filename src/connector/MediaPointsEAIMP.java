@@ -16,14 +16,14 @@ import models.EvaluationRequest;
 
 public class MediaPointsEAIMP {
 	String DRIVER="com.mysql.jdbc.Driver";
-	String URL="jdbc:mysql://188.82.156.135:3306";
-	String USER="monkey";
-	String PASSWORD="monkey";
+	String URL="jdbc:mysql://localhost:3306";
+	String USER="BD";
+	String PASSWORD="12341234";
 	String sql="select avg(points) from dai.evaluation_activity;";
     ResultSet rs;
     float count=0;
 	public float NumberFact() {
-		// Devolver a média dos points das evaluations_request
+		// Devolver a mÃ©dia dos points das evaluations_request
 		try {
 			Class.forName(DRIVER);
 			Connection con=DriverManager.getConnection(URL,USER,PASSWORD);
