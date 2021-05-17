@@ -3,7 +3,7 @@ package models;
 public class InstitutionCandidateJoin {
 
 	
-	String name,address,county,district,post_code;
+	String name,address,county,district,post_code,email;
 	int nif,phone_number,id_candidate,id_institution, id_user;
 	
 	
@@ -23,6 +23,23 @@ public class InstitutionCandidateJoin {
 
 	}
 
+	
+	public InstitutionCandidateJoin(int id_candidate, int id_institution, int id_user, String name, String address, String county, String district,
+			String post_code, int nif, int phone_number, String email) {
+		super();
+		this.id_candidate = id_candidate;
+		this.id_institution = id_institution;
+		this.id_user = id_user;
+		this.name = name;
+		this.address = address;
+		this.county = county;
+		this.district = district;
+		this.post_code = post_code;
+		this.nif = nif;
+		this.phone_number = phone_number;
+		this.email = email;
+
+	}
 
 	public String getName() {
 		return name;
@@ -122,8 +139,19 @@ public class InstitutionCandidateJoin {
 	public void setId_user(int id_user) {
 		this.id_user = id_user;
 	}
+
+
+	public String getEmail() {
+		return email;
+	}
+
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
 	
 	
 	
 	
 }
+
