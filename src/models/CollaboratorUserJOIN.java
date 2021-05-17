@@ -3,7 +3,7 @@ package models;
 public class CollaboratorUserJOIN {
 
 	int id_collaborator, id_user,nif,phone_number;
-	String name,type,address,county,district,post_code,status;
+	String name,type,address,county,district,post_code,status,email;
 	
 	
 	public CollaboratorUserJOIN(int id_collaborator, int id_user, int nif, int phone_number, String name, String type,
@@ -20,6 +20,29 @@ public class CollaboratorUserJOIN {
 		this.district = district;
 		this.post_code = post_code;
 		this.status = status;
+	}
+
+
+	public CollaboratorUserJOIN(int id_collaborator, int id_user, int nif, int phone_number, String name, String type,
+			String address, String county, String district, String post_code, String status, String email) {
+		super();
+		this.id_collaborator = id_collaborator;
+		this.id_user = id_user;
+		this.nif = nif;
+		this.phone_number = phone_number;
+		this.name = name;
+		this.type = type;
+		this.address = address;
+		this.county = county;
+		this.district = district;
+		this.post_code = post_code;
+		this.status = status;
+		this.email = email;
+	}
+	
+	
+	public CollaboratorUserJOIN() {
+		// TODO Auto-generated constructor stub
 	}
 
 
@@ -130,6 +153,16 @@ public class CollaboratorUserJOIN {
 
 	public void setStatus(String status) {
 		this.status = status;
+	}
+
+
+	public String getEmail() {
+		return email;
+	}
+
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	
 }
