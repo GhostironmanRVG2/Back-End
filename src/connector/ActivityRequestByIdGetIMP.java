@@ -16,9 +16,9 @@ import models.Subscription;
 
 public class ActivityRequestByIdGetIMP {
 	String DRIVER="com.mysql.jdbc.Driver";
-	String URL="jdbc:mysql://188.82.156.135:3306";
-	String USER="monkey";
-	String PASSWORD="monkey";
+	String URL="jdbc:mysql://localhost:3306";
+	String USER="BD";
+	String PASSWORD="12341234";
 	String sql="Select distinct ea.points as points_evaluation,ra.id_request,ra.id_institution,ra.date,ra.time,ra.type,ra.county,ra.district,ra.address,ra.state,ra.post_code,ra.latitude,ra.longitude,ra.description, ra.photo,r.points from dai.request_activity ra left JOIN dai.activity a ON ra.id_request=a.id_request left JOIN dai.subscription s ON s.id_activity=a.id_activity left JOIN dai.reward r ON r.id_reward=a.id_reward left JOIN dai.child c on s.id_child = c.id_child left JOIN dai.evaluation_activity ea on ea.id_child = c.id_child where c.id_child=? and s.state=? and ra.date<CURDATE() OR (ra.date=CURDATE() and ra.time<=CURTIME())";
 	ResultSet rs;
 	List<Request_ActivityP> lista=new ArrayList<Request_ActivityP>();
