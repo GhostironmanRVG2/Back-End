@@ -7,7 +7,7 @@ public class Request_ActivityP {
 
 	String state,description,type,county,district,address,post_code,photo;
 	int id_institution,id_request,points,total_points;
-	float latitude,longitude;
+	float latitude,longitude,points_evaluation;
 	Time time;
 	Date date;
 	
@@ -39,11 +39,37 @@ public class Request_ActivityP {
 	
 	
 	
+	public Request_ActivityP(Time time, Date date, String state, String description, String type, String county,
+			String district, String address,float latitude,float longitude ,String post_code, String photo, int id_institution, int id_request,int points,float points_evaluation) {
+		super();
+		this.total_points=total_points;
+		this.points=points;
+		this.latitude=latitude;
+		this.longitude=longitude;
+		this.time = time;
+		this.date = date;
+		this.state = state;
+		this.description = description;
+		this.type = type;
+		this.county = county;
+		this.district = district;
+		this.address = address;
+		this.post_code = post_code;
+		this.photo = photo;
+		this.id_institution = id_institution;
+		this.id_request = id_request;
+		this.points_evaluation = points_evaluation;
+	}
 	
 	
 	
 	
-	
+	public float getPoints_evaluation() {
+		return points_evaluation;
+	}
+	public void setPoints_evaluation(float points_evaluation) {
+		this.points_evaluation = points_evaluation;
+	}
 	public int getTotal_points() {
 		return total_points;
 	}
