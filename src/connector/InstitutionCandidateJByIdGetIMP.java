@@ -12,9 +12,9 @@ import models.InstitutionCandidateJoin;
 
 public class InstitutionCandidateJByIdGetIMP {
 	String DRIVER="com.mysql.jdbc.Driver";
-	String URL="jdbc:mysql://188.82.156.135:3306";
-	String USER="monkey";
-	String PASSWORD="monkey";
+	String URL="jdbc:mysql://localhost:3306";
+	String USER="BD";
+	String PASSWORD="12341234";
 	String sql="Select candidate_institution.id_candidate, institution.id_institution, institution.id_user, candidate_institution.name, candidate_institution.address, candidate_institution.county, candidate_institution.district, candidate_institution.post_code, candidate_institution.nif, candidate_institution.phone_number, candidate_institution.email from dai.candidate_institution JOIN dai.institution ON candidate_institution.id_candidate = institution.id_candidate where id_institution=?";
     ResultSet rs; 
     List<InstitutionCandidateJoin> lista=new ArrayList<InstitutionCandidateJoin>();
