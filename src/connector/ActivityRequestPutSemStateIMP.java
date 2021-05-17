@@ -46,7 +46,7 @@ int i;
 			ps.setString(8, type);
 			ps.setDate(9,date);
 			ps.setTime(10, time);
-			ps.setInt(12, id_request);
+			ps.setInt(11, id_request);
 			
 			
 			

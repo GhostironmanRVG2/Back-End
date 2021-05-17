@@ -97,7 +97,7 @@ try {
 		
 		
 		
-	}else {
+	}else if(session.getAttribute("header").equals("Institution")) {
 		
 		
 		
@@ -125,6 +125,18 @@ try {
 	    msg.put("nif", nif);
 	
 			
+		} catch (JSONException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
+	}else {
+		
+		
+		try {
+			msg.put("type", "ADMIN");
 		} catch (JSONException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

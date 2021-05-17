@@ -3,3 +3,6 @@
 /models/
 /Request_activityCurrentYearMounthGet.class
 /ActivityMounthGet.class
+/EvaluationActivityGetId.class
+/MediaPointsER.class
+/ActivityNextGet.class

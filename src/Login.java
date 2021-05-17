@@ -106,7 +106,7 @@ public class Login extends HttpServlet {
 			            	
 			            	
 			            	
-			            }else{
+			            }else if(k.loginT().equals("Institution")){
 			            	
 			            	//SACAR LOGIN TYPE
 				            UserGetIdIMP l2=new UserGetIdIMP();
@@ -128,6 +128,15 @@ public class Login extends HttpServlet {
 			            	
 			            	
 			            	
+			            	
+			            	
+			            }else {
+			   
+				            //CRIAR DADOS ADM
+				            session.setAttribute("header","Admin");
+				            doGet(req,resp,200,null,null);
+				            
+				            
 			            	
 			            	
 			            }
@@ -231,7 +240,7 @@ public class Login extends HttpServlet {
 	    		
 	    		
 	    		
-	    	}else {
+	    	}else if(login.getClass().equals(in.getClass())) {
 	    		MSG.put("STATUS", M.getStatusS());
 		    	MSG.put("MSG",M.getStatusMsgS() );
 		    	//dados user
@@ -255,6 +264,11 @@ public class Login extends HttpServlet {
 				 
 	    		
 	    		
+	    		
+	    		
+	    	}else {
+	    		//dados
+	    		MSG.put("type","Admin");
 	    		
 	    		
 	    	}

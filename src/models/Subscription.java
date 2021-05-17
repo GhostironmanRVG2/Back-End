@@ -2,7 +2,7 @@ package models;
 
 public class Subscription {
 	String evaluation,photo_1,photo_2,state;
-	int id_activity,id_child,janeiro,fevereiro,março,abril,maio,junho,julho,agosto,setembro,outubro,novembro,dezembro;
+	int id_activity,id_child,janeiro,fevereiro,março,abril,maio,junho,julho,agosto,setembro,outubro,novembro,dezembro,atual;
 	
 	
 	
@@ -71,7 +71,7 @@ public class Subscription {
 	
 	
 	public Subscription(int janeiro, int fevereiro, int março, int abril, int maio, int junho, int julho, int agosto,
-			int setembro, int outubro, int novembro, int dezembro) {
+			int setembro, int outubro, int novembro, int dezembro,int atual) {
 		
 		
 		
@@ -89,6 +89,14 @@ public class Subscription {
 		this.outubro = outubro;
 		this.novembro = novembro;
 		this.dezembro = dezembro;
+		this.atual=atual;
+	}
+	
+	public int getAtual() {
+		return atual;
+	}
+	public void setAtual(int atual) {
+		this.atual = atual;
 	}
 	public int getJaneiro() {
 		return janeiro;

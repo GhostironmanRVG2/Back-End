@@ -6,7 +6,7 @@ import java.sql.Time;
 public class Request_Activity {
 
 	String state,description,type,county,district,address,post_code,photo,activity_state;
-	int id_institution,id_request,id_activity,id_reward,janeiro,fevereiro,março,abril,maio,junho,julho,agosto,setembro,outubro,novembro,dezembro;
+	int id_institution,id_request,id_activity,id_reward,janeiro,fevereiro,março,abril,maio,junho,julho,agosto,setembro,outubro,novembro,dezembro,atual;
 	float latitude,longitude;
 	Time time;
 	Date date;
@@ -89,7 +89,7 @@ public class Request_Activity {
 	
 	
 	public Request_Activity(int janeiro, int fevereiro, int março, int abril, int maio, int junho, int julho,
-				int agosto, int setembro, int outubro, int novembro, int dezembro) {
+				int agosto, int setembro, int outubro, int novembro, int dezembro,int atual) {
 			super();
 			//COUNT REQUEST_ACTIVITY
 			this.janeiro = janeiro;
@@ -104,7 +104,16 @@ public class Request_Activity {
 			this.outubro = outubro;
 			this.novembro = novembro;
 			this.dezembro = dezembro;
+			this.atual=atual;
+		    
 		}
+	
+	public int getAtual() {
+		return atual;
+	}
+	public void setAtual(int atual) {
+		this.atual = atual;
+	}
 	public String getActivity_state() {
 			return activity_state;
 		}
