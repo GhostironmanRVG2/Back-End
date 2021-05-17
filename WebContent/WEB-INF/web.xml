@@ -1364,7 +1364,16 @@
   
   
   
-  
+    
+     <servlet>
+  <servlet-name>CollaboratorUserJoinGetIdUser</servlet-name>
+  <servlet-class>CollaboratorUserJoinGetIdUser</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>CollaboratorUserJoinGetIdUser</servlet-name>
+  <url-pattern>/CollaboratorUserJoinGetIdUser</url-pattern>
+  </servlet-mapping>
   
   
   
