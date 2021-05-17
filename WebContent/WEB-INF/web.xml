@@ -1351,7 +1351,15 @@
   </servlet-mapping>
   
   
-  
+     <servlet>
+  <servlet-name>MediaPointsEA</servlet-name>
+  <servlet-class>MediaPointsEA</servlet-class>
+
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>MediaPointsEA</servlet-name>
+  <url-pattern>/MediaPointsEA</url-pattern>
+  </servlet-mapping>
   
   
   
