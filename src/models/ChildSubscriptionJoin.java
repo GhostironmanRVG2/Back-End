@@ -1,8 +1,11 @@
 package models;
 
+import java.util.Date;
+
 public class ChildSubscriptionJoin {
 	String evaluation, photo_1, photo_2, state, name, birth_date, photo,description;
 	int id_activity, id_child, total_points, id_user, phone_number_tutor, id_institution;
+	Date date;
 	
 	
 	public ChildSubscriptionJoin() {}
@@ -48,7 +51,28 @@ public class ChildSubscriptionJoin {
 	}
 	
 	
-
+	public ChildSubscriptionJoin(String evaluation, String photo_1, String photo_2, String state, String name,
+			String birth_date, String photo, int id_activity, int id_child, int total_points, int id_user,
+			int phone_number_tutor, int id_institution,String description,Date date) {
+		super();
+		this.evaluation = evaluation;
+		this.photo_1 = photo_1;
+		this.photo_2 = photo_2;
+		this.state = state;
+		this.name = name;
+		this.birth_date = birth_date;
+		this.photo = photo;
+		this.id_activity = id_activity;
+		this.id_child = id_child;
+		this.total_points = total_points;
+		this.id_user = id_user;
+		this.phone_number_tutor = phone_number_tutor;
+		this.id_institution = id_institution;
+		this.description=description;
+		this.date=date;
+	}
+	
+	
 
 	public ChildSubscriptionJoin(String state, String name, String birth_date, String photo, int id_activity,
 			int id_child, int total_points, int id_user, int phone_number_tutor) {
@@ -66,25 +90,6 @@ public class ChildSubscriptionJoin {
 
 
 
-	public ChildSubscriptionJoin(String evaluation, String photo_1, String photo_2, String state, String name,
-			String birth_date, String photo, String description, int id_activity, int id_child, int total_points,
-			int id_user, int phone_number_tutor, int id_institution) {
-		super();
-		this.evaluation = evaluation;
-		this.photo_1 = photo_1;
-		this.photo_2 = photo_2;
-		this.state = state;
-		this.name = name;
-		this.birth_date = birth_date;
-		this.photo = photo;
-		this.description = description;
-		this.id_activity = id_activity;
-		this.id_child = id_child;
-		this.total_points = total_points;
-		this.id_user = id_user;
-		this.phone_number_tutor = phone_number_tutor;
-		this.id_institution = id_institution;
-	}
 
 	
 	
