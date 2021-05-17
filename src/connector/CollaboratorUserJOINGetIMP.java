@@ -15,9 +15,9 @@ import models.CollaboratorUserJOIN;
 public class CollaboratorUserJOINGetIMP {
 	
 String DRIVER="com.mysql.jdbc.Driver";
-String URL="jdbc:mysql://188.82.156.135:3306";
-String USER="monkey";
-String PASSWORD="monkey";
+String URL="jdbc:mysql://localhost:3306";
+String USER="BD";
+String PASSWORD="12341234";
 String sql="Select u.id_user, u.status, c.id_collaborator, c.nif, c.name, c.post_code, c.address, c.district, c.county, c.type, c.phone_number from dai.user u, dai.collaborator c where u.id_user = c.id_user";
 ResultSet rs; 
 List<CollaboratorUserJOIN> lista=new ArrayList<CollaboratorUserJOIN>();
