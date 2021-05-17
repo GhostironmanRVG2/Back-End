@@ -16,10 +16,10 @@ import models.Subscription;
 
 public class ActivityRequestByIdGetIMP {
 	String DRIVER="com.mysql.jdbc.Driver";
-	String URL="jdbc:mysql://localhost:3306";
-	String USER="BD";
-	String PASSWORD="12341234";
-	String sql="Select request_activity.id_request,request_activity.id_institution,request_activity.date,request_activity.time,request_activity.type,request_activity.county,request_activity.district,request_activity.address,request_activity.state,request_activity.post_code,request_activity.latitude,request_activity.longitude,request_activity.description,request_activity.photo,reward.points from dai.request_activity JOIN dai.activity ON request_activity.id_request=activity.id_request JOIN dai.subscription ON subscription.id_activity=activity.id_activity JOIN dai.reward ON reward.id_reward=activity.id_reward  where subscription.id_child=? and subscription.state=?";
+	String URL="jdbc:mysql://188.82.156.135:3306";
+	String USER="monkey";
+	String PASSWORD="monkey";
+	String sql="Select distinct ea.points as points_evaluation,ra.id_request,ra.id_institution,ra.date,ra.time,ra.type,ra.county,ra.district,ra.address,ra.state,ra.post_code,ra.latitude,ra.longitude,ra.description, ra.photo,r.points from dai.request_activity ra left JOIN dai.activity a ON ra.id_request=a.id_request left JOIN dai.subscription s ON s.id_activity=a.id_activity left JOIN dai.reward r ON r.id_reward=a.id_reward left JOIN dai.child c on s.id_child = c.id_child left JOIN dai.evaluation_activity ea on ea.id_child = c.id_child where c.id_child=? and s.state=? and ra.date<CURDATE() OR (ra.date=CURDATE() and ra.time<=CURTIME())";
 	ResultSet rs;
 	List<Request_ActivityP> lista=new ArrayList<Request_ActivityP>();
 	Request_Activity o=new Request_Activity();
@@ -51,8 +51,9 @@ public class ActivityRequestByIdGetIMP {
 			            	float latitude=rs.getFloat("latitude");
 			            	float longitude=rs.getFloat("longitude");
 			            	int points=rs.getInt("points");
+			            	float points_evaluation=rs.getFloat("points_evaluation");
 				          
-				            lista.add(new Request_ActivityP(time,date,state,description,type,county,district,address,latitude,longitude,post_code,photo,id_institution,id_request,points));
+				            lista.add(new Request_ActivityP(time,date,state,description,type,county,district,address,latitude,longitude,post_code,photo,id_institution,id_request,points,points_evaluation));
 				  
 				           }
 						
