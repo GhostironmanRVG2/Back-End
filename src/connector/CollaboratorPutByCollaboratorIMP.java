@@ -10,11 +10,11 @@ import models.Collaborator;
 
 public class CollaboratorPutByCollaboratorIMP {
 	String DRIVER="com.mysql.jdbc.Driver";
-	String URL="jdbc:mysql://188.82.156.135:3306";
-	String USER="monkey";
-	String PASSWORD="monkey";
-String sql="Update dai.collaborator c, dai.user u set c.name=?,c.address=?,c.county=?,c.district=?,c.post_code=?,c.nif=?,c.phone_number=?, u.email=?,c.id_user=? where c.id_user = u.id_user and c.id_collaborator=? ";
-int i;
+	String URL="jdbc:mysql://localhost:3306";
+	String USER="BD";
+	String PASSWORD="12341234";
+	String sql="Update dai.collaborator c, dai.user u set c.name=?,c.address=?,c.county=?,c.district=?,c.post_code=?,c.nif=?,c.phone_number=?, u.email=?,c.id_user=? where c.id_user = u.id_user and c.id_collaborator=? ";
+	int i;
 	public int Put(Collaborator c) {
 		// extract
 	   String name = c.getName();
