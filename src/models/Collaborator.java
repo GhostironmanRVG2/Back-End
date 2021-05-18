@@ -1,7 +1,7 @@
 package models;
 
 public class Collaborator {
-	String name,type,address,county,district,post_code;
+	String name,type,address,county,district,post_code,email;
 	int nif,phone_number,id_user,id_collaborator;
 	
 	
@@ -31,7 +31,19 @@ public class Collaborator {
 		this.id_user = id_user;
 	}
 	
-	
+	public Collaborator(String name, String address, String county, String district,
+			String post_code,int nif,int phone_number, String email,int id_user,int id_collaborator) {
+		this.id_collaborator=id_collaborator;
+		this.name = name;
+		this.address = address;
+		this.county = county;
+		this.district = district;
+		this.post_code = post_code;
+		this.nif = nif;
+		this.phone_number = phone_number;
+		this.id_user = id_user;
+		this.email = email;
+	}
 	
 	
 
@@ -121,6 +133,22 @@ public class Collaborator {
 
 	public void setId_user(int id_user) {
 		this.id_user = id_user;
+	}
+
+
+
+
+
+	public String getEmail() {
+		return email;
+	}
+
+
+
+
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	
 	
