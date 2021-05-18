@@ -24,7 +24,6 @@ public class CollaboratorPutByCollaborator extends HttpServlet {
 	           			
 		      //Parametros
 		     String name=req.getParameter("name");
-		     String type=req.getParameter("type");
 		     String address=req.getParameter("address");
 		     String county=req.getParameter("county");
 		     String district=req.getParameter("district");
@@ -33,24 +32,25 @@ public class CollaboratorPutByCollaborator extends HttpServlet {
 		     int nif=Integer.valueOf(nf);
 		     String pho=req.getParameter("phone_number");
 		     int phone_number=Integer.valueOf(pho);
-		     String col=req.getParameter("id_collaborator");
-		     int id_collaborator=Integer.valueOf(col);
+		     String email=req.getParameter("email");
 		     String user=req.getParameter("id_user");
 		     int id_user=Integer.valueOf(user);
+		     String col=req.getParameter("id_collaborator");
+		     int id_collaborator=Integer.valueOf(col);
 
 		
 		       //Object request
 		      Collaborator R=new Collaborator();
 		      R.setName(name);
-		      R.setType(type);
 		      R.setAddress(address);
 		      R.setCounty(county);
 		      R.setDistrict(district);
 		      R.setPost_code(post_code);
 		      R.setNif(nif);
 		      R.setPhone_number(phone_number);
-		      R.setId_collaborator(id_collaborator);
+		      R.setEmail(email);
 		      R.setId_user(id_user);
+		      R.setId_collaborator(id_collaborator);
 		       
 		      //Connector 
 		      CollaboratorPutByCollaboratorIMP c=new CollaboratorPutByCollaboratorIMP();  
