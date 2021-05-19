@@ -17,7 +17,7 @@ public class EvaluationActivityGetIdIMP {
 	String URL="jdbc:mysql://localhost:3306";
 	String USER="BD";
 	String PASSWORD="12341234";
-	String sql="Select points from dai.evaluation_activity where id_child=? and id_activity=? ";
+	String sql="Select ea.points from dai.evaluation_activity ea where ea.id_child=? and ea.id_activity=? ";
 	ResultSet rs;
 	List<EvaluationActivity> lista=new ArrayList<EvaluationActivity>();
 	public List<EvaluationActivity> Get(EvaluationActivity subs) {
